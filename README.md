@@ -6,9 +6,9 @@
 
 Title: Arduino Indoor Weather Station 
 
-The aim of this project is to create a system to monitor my 4X4 grow tent (which currently contains four potted plants and two hydroponic systems) while I am away on vacation. The goal is integrate several arduino sensors (e.g., those for temperature, pH, and total dissolved solids, AKA "TDS") using a single-board computer and then stream this data to a laptop or cellular device via a bluetooth or wifi tranceiver module. This project will investigate concepts relevant to the internet of things (IOT), with a focus on real-time data handling and network driver development.
+The aim of this project is to create a system to monitor my 4X4 grow tent (which currently contains four potted plants and two hydroponic systems) while I am away on vacation. The goal is integrate several arduino sensors (e.g., those for temperature, pH, and total dissolved solids, AKA "TDS") on a single-board computer and stream this data to a laptop or cellular device via bluetooth or wifi tranceiver module(s). This project will investigate concepts relevant to the internet of things (IOT), with a focus on real-time data handling, and network driver development.
 
-<strong>Vision Statement:</strong> My goal for this project is to learn more about hardware monitoring and control, as well as to learn a bit more about networks and application development. 
+<strong>Vision Statement:</strong> My goal for this project is to learn more about hardware monitoring and control, as well as networks and application-driven devices. 
 
 <strong>Motivation:</strong> My motivation for completing this project is to begin a long-term development project that is relevant to my interests and hobbies. By orienting a portfolio around my personal hobbies, my hope is that I will continue adding to this development project for a long time, helping to strengthening my skills as a developer and adding some complementary job skills and teaching me complementary job skills that I can confidently add to my resume. 
 
