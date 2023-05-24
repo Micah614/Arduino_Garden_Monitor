@@ -4,9 +4,7 @@
 ## CSPB-3112, Professional Development Semester Project 
 ## Professional Work Portfolio Showcase
 
-The aim of this project is to create a system that will monitor the status of a 4X4 grow tent and hydroponic system(s). This project will integrate several arduino sensors (e.g., to monitor temperature, pH, and total dissolved solids) with bluetooth and wifi tranceiver modules. 
+The aim of this project is to create a system to monitor my 4X4 grow tent, which currently contains four potted plants and two hydroponic systems. The general goal is integrate several arduino sensors (e.g., for temperature, pH, and total dissolved solids, AKA "TDS") with a single-board computer, and stream this data to a laptop or android cellphone using a bluetooth and/or wifi tranceiver module.
 
-will explore concepts of relevance to the internet of things (IOT). This project will focus on real-time data handling, wireless networking, and driver development.
-
-The goal is to generate, track, and monitor real-time system measurements such as hydroponic solution pH, solution/ambient temperatures, total dissolved solids (TDS), and soil moisture of potted plants.
+This project will discuss several concepts of relevance to the internet of things (IOT). This project will focus on real-time data handling, wireless networking, and network driver development.
 
