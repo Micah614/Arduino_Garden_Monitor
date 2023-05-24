@@ -2,4 +2,4 @@
 
 ## Micah Simmerman
 ## CSPB-3112, Professional Development Semester Project 
-## Starting a Professional Work Portfolio
+## Creating a Professional Work Portfolio Showcases
