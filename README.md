@@ -10,7 +10,7 @@ The aim of this project is to create a system to monitor my 4X4 grow tent (which
 
 <strong>Vision Statement:</strong> My goal for this project is to learn more about hardware monitoring and control, as well as networks and application-driven devices. 
 
-<strong>Motivation:</strong> My motivation for completing this project is to begin a long-term development project that is relevant to my interests and hobbies. By orienting a portfolio around my personal hobbies, my hope is that I will continue adding to this development project for a long time, helping to strengthening my skills as a developer and adding some complementary job skills and teaching me complementary job skills that I can confidently add to my resume. 
+<strong>Motivation:</strong> My motivation for completing this project is to begin a long-term development project relevant to my hobbies and interests. My hope is that by orienting a portfolio around my personal interests, I will be more likely to continue this project and develop these skills even further.
 
 <strong>Project Goal:</strong> Assemble an Arduino device to monitor the pH of my hydroponics system and collect/monitor live-stream data collected from this device on my laptop computer or cell phone. 
 
