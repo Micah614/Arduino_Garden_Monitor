@@ -10,7 +10,7 @@ The aim of this project is to create a system to monitor my 4X4 grow tent (which
 
 <strong>Vision Statement:</strong> My goals for this project are: 1.) Learn the basics of hardware monitoring and control. 2.) Develop hands-on experience with IOT networks and application-driven devices. 3.) Gain experience with object oriented programming in C++, as well as device integration and server programming in Python. 3.) Extend my knowledge of XHTML data formatting and web-development using HTML/CSS/JavaScript. 
 
-<strong>Motivation:</strong> My motivation for completing this project is to begin a long-term research and development project relevant to my hobbies and interests. My hope is that by orienting a portfolio around my personal interests, I will be more likely to continue this educational project to develop a portfolio of professional skills.
+<strong>Motivation:</strong> My motivation for completing this project is to begin a long-term research and development project relevant to my hobbies and interests. My hope is that by orienting a portfolio around my personal interests, I will be more likely to continue this project and develop a portfolio of professional skills.
 
 <strong>Project Goal:</strong> Assemble an Arduino device to monitor the pH of my hydroponics system and collect/monitor live-stream data collected from this device on my laptop computer or cell phone. 
 
