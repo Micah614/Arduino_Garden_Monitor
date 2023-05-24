@@ -12,7 +12,7 @@ The aim of this project is to create a system to monitor my 4X4 grow tent (which
 
 <strong>Motivation:</strong> My motivation for completing this project is to begin a long-term research and development project relevant to my hobbies and interests. My hope is that by orienting a portfolio around my personal interests, I will be more likely to continue this project and develop a portfolio of professional skills.
 
-<strong>Project Goal:</strong> Assemble an Arduino device to monitor the pH of my hydroponics system and collect/monitor live-stream data collected from this device on my laptop computer or cell phone. 
+<strong>Project Goal:</strong> Assemble an Arduino device to monitor the pH, TDS, and temperature of my hydroponic solutions and monitor live-stream data collected from these devices uisng my laptop or cell phone. 
 
 <strong>Risks:</strong> This project requires multiple hardware components (Arduino kit components, which I have already ordered) and some technical background regarding analytical sensors and network devices.
 
