@@ -18,6 +18,6 @@ Risks: This project requires Arduino hardware, a technical background in analyti
 
 Mitigation Strategies: In addition to the sensors, wires, and board components needed to make the transceiver device, I purchased an Arduino &#34;Project Board&#34; that comes with a highly-recommended tutorial. There are YouTube tutorials on how to creating a pH meter from Arduino parts, and I found a tutorial about Arduino Bluetooth. 
 
-Project Assessments: The end goal will be to &#34;spin up&#34; a simple xhtml webpage that displays real-time measurements collected from the extended transceiver, possibly refreshing these values ever 20 minutes or so. This way, I can monitor my plants anywhere there is an internet connection.
+Project Assessments: The end goal will be to &#34;spin up&#34; a simple xhtml webpage that displays real-time measurements collected from the extended transceiver, possibly refreshing these values ever 20 minutes or so. This way, I can monitor my plants from anywhere there is an internet connection.
 
 Project Link: https://micah614.github.io/arduino-indoor-weatherstation/
