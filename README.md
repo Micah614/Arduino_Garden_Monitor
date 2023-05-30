@@ -2,7 +2,7 @@
 
 <h2>Micah Simmerman</h2>
 
-<h2>CSPB-3112, Professional Development Showcase</h2>
+<h2>CSPB-3112, Professional Development Project</h2>
 
 Title: Arduino Indoor Weather Station 
 
