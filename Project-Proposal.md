@@ -1,7 +1,7 @@
-CSPB-3112 Professional Development in Computer Science
-Micah Simmerman
-Summer 2023
-Remote Garden Monitor: Exploring IOT Networks and Arduino Single-Board Computers
+CSPB-3112 Professional Development in Computer Science<br>
+Micah Simmerman<br>
+Summer 2023<br>
+Remote Garden Monitor: Exploring IOT Networks and Arduino Single-Board Computers<br>
 GitHub Portfolio: https://github.com/Micah614/arduino-indoor-weatherstation/blob/main/README.md
 
 
