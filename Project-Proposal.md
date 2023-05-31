@@ -2,7 +2,7 @@ CSPB-3112 Professional Development in Computer Science<br>
 Micah Simmerman<br>
 Summer 2023<br>
 Remote Garden Monitor: Exploring IOT Networks and Arduino Single-Board Computers<br>
-GitHub Portfolio: https://github.com/Micah614/arduino-indoor-weatherstation/blob/main/README.md<br>
+GitHub Portfolio: https://github.com/Micah614/arduino-indoor-weatherstation/<br>
 
 Introduction<br>
 Smart devices have become increasingly common in US households. Connected device commerce is expected to expand to a $581.85 billion industry by 2032 according to a recent report by precedenceresearch.com. Network connected devices are currently found in cars, homes, tablets, watches, cell phones, surveillance systems, strap-on monitors, virtual reality equipment, and much more. The increasing number of network-connected devices in the last decade has driven researchers to adopt the term “internet of things”, also known as “IOT”. This project will explore the fundamental characteristics of IOT devices by developing a Bluetooth and Wi-Fi connected greenhouse monitoring station using Arduino single-board computer parts, extended C/C++, Python, HTML, CSS, and JavaScript. 
