@@ -36,3 +36,7 @@ img {
 .warning {  <!-- This is a class selector. -->
     font-weight: bold;
 }
+
+.fig_label {
+    font-size: 120%;
+}
