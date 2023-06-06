@@ -16,8 +16,21 @@
     a {
         text-decoration: none;
     }
+    a:hover {
+        color: red;
+    }
     p {
         font-size: 90%;
+    }
+
+    .navigation_div {
+        border: 5px solid #000000;
+        width: 60%;
+        padding: 10px;
+        margin: 0px;
+        border-right: 1px solid #000000;
+        padding-right: 1px;
+        margin-right: 1px;
     }
     #navigation_menu { <!-- This is an id selector. -->
         border: 1px solid black;
@@ -35,16 +48,17 @@
     <p>Welcome to the CSPB-3112 Arduino Greenhouse Monitor Project. Click on any link below to explore the 
         project repository.</p>
 
-    <ul id="navigation_menu">
-        <li><strong><a href="">Proposal and Project Timeline</a></strong> - Read the original project proposal and outline for the 
+    <div id="navigation_div">
+        <ul id="navigation_menu">
+            <li><strong><a href="">Proposal and Project Timeline</a></strong> - Read the original project proposal and outline for the 
             Arduino garden monitoring project.</li>
-        <br>
-        <li><strong><a href="">Arduino Code Repository</a></strong> - Check out the Arduino project code repository. </li>
-        <br>
-        <li><strong><a href="">Project Photos, Links, and Demonstration Videos</a></strong> - Browse photos of materials for the project, 
+            <br>
+            <li><strong><a href="">Arduino Code Repository</a></strong> - Check out the Arduino project code repository. </li>
+            <br>
+            <li><strong><a href="">Project Photos, Links, and Demonstration Videos</a></strong> - Browse photos of materials for the project, 
             as well as links to prior works and demonstration videos uploaded during the project.</li>
-    </ul>
-
+        </ul>
+    </div>
     <img src="Grow_Tent.jpg" alt="4x4 grow tent." width="500" height="600">
 </body>
 </html>
