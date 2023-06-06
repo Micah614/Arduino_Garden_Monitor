@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
 
     <title>Document</title>
-    
+
 </head>
 <body>
     <h3>Introduction</h3>
@@ -21,7 +21,7 @@
     (IDE), which I will complete with the help of Freenove® project board kit that came with the tutorial.</p>
     
     <!-- Image of the Arduino project board goes here-->
-    <a href="Images/Project_Board.jpg"></a>
+    <img src="Images/Project_Board.jpg"></a>
     
     <p>Figure 1.) The project board I will be using to learn about driver development, prototyping, and the Arduino IDE software in weeks 
         2-5 of the semester.</p>
@@ -101,48 +101,80 @@
     <h3>Week 9: Streaming Data with Wi-Fi.</h3>
     <ul>
         <li>Install a Wi-Fi transceiver on the existing device. </li>
-        <li>Develop the firmware code to establish a Wi-Fi connection using a local area router and monitor the resource from a local computer.</li>
-        <li>Evaluate the device’s operation under the new firmware. Has the new configuration affected the device’s performance in any way? Was the Wi-Fi connection a success? Why or why not?</li>
+        <li>Develop the firmware code to establish a Wi-Fi connection using a local area router and monitor the resource from a local 
+            computer.</li>
+        <li>Evaluate the device operation under the new firmware. Has the new configuration affected the performance of the device in any 
+            way? Was the Wi-Fi connection a success? Why or why not?</li>
     </ul>
     
     <h3>Week 10: Exporting Data as SQL, XML, and JSON</h3>
     <ul>
-        <li>Explore data storage and back-up techniques, including SQLite, XML, and JSON storage formats. What section of the device interface appears to work best for extracting the data in real time? What equations should be used to extract the data into a more meaningful form? (e.g., “timed arithmetic average for pH sensor data.”)</li>
-        <li>Create a folder that will eventually contain a Python script for serving dynamic HTML, CSS, and JavaScript (i.e., a REST API). </li>
-        <li>Place the SQLite, XML, or JSON file(s) inside of the API folder. Program the firmware to overwrite a dependency file whenever the device collects a new measurement. Which data format (SQL, XML, or JSON) seems easiest to incorporate with the proposed API? Which data format appears least compatible with the proposed API? Explain.</li>
+        <li>Explore data storage and back-up techniques, including SQLite, XML, and JSON storage formats. What section of the device 
+            interface appears to work best for extracting the data in real time? What equations should be used to extract the data into a 
+            more meaningful form? (e.g., “timed arithmetic average for pH sensor data.”)</li>
+        <li>Create a folder that will eventually contain a Python script for serving dynamic HTML, CSS, and JavaScript (i.e., a REST API).</li>
+        <li>Place the SQLite, XML, or JSON file(s) inside of the API folder. Program the firmware to overwrite a dependency file whenever 
+            the device collects a new measurement. Which data format (SQL, XML, or JSON) seems easiest to incorporate with the proposed 
+            API? Which data format appears least compatible with the proposed API? Explain.</li>
         <li>Regression testing.</li>
     </ul>
 
     <h3><u>Week 11: Developing a Simple Web Page to Display the Sensor Data.</u></h3>
     <ul>
-        <li>Write a python script to serve dynamic single page web service using HTML/CSS/JavaScript combined with formatted data developed from week 10.</li>
+        <li>Write a python script to serve dynamic single page web service using HTML/CSS/JavaScript combined with formatted data 
+            developed from week 10.</li>
         <li>Render the API on a python simple server. Record a quick video and share the results on Piazza. </li>
-        <li>Ensure the script renders the page correctly and all back-up files and dependencies are maintained by the transmitting device.</li>
+        <li>Ensure the script renders the page correctly and all back-up files and dependencies are maintained by the transmitting 
+            device.</li>
     </ul>
     
     <h3><u>Week 12: Documentation, Wrap-Up, and Presentation.</u></h3>
     <ul>
         <li>Review the project materials, compose final documents and/or videos, and apply final touches to the project documentation.</li>
-        <li>Complete the final presentation explaining how each section of the project went and share it with GitHub Pages and the rest of the class.</li>
+        <li>Complete the final presentation explaining how each section of the project went and share it with GitHub Pages and the rest 
+            of the class.</li>
     </ul>
     
     <h3><u>Risks to Project Completion</u></h3>
     <p>This will be my first Arduino project, so I expect to encounter some technical difficulties along the way. Here are some of the 
         risks to completing the project on time:</p>
     <ul>
-        <li><strong>Broken or missing parts:</strong> Forgetting to purchase a power supply or special component, or needing to replace a broken piece at the wrong time could delay the project timeline by a week or so.</li>
-        <li><strong>Running out of memory:</strong> The final device is intended to function as a standalone computer with local and wide area network connectivity. Single board computers contain less memory than a typical computer, however. Running out of on-board memory would require restructuring the code base and rolling development features, either of these outcomes would jeopardize the project timeline and outcome.</li>
-        <li><strong>Choosing the right development tools for the job:</strong> It is difficult to know ahead of time every tool that will work best for this project.</li>
-        <li><strong>Forgetting a project section:</strong> It is possible that I may have overlooked some critical detail in the project outline. There is also a chance that the project could be significantly more complicated than it is presented to be. Both risks need to be addressed in the project timeline.</li>
-        <li><strong>Completing the project in the wrong order:</strong> Performing the development steps in the wrong order could lead to complex bugs involving electrical components. For example, a project task could involve parts or firmware that are incompatible with another section of the project. Troubleshooting a problem such as this could be time-consuming.</li>
+        <li><strong>Broken or missing parts:</strong> Forgetting to purchase a power supply or special component, or needing to replace a 
+            broken piece at the wrong time could delay the project timeline by a week or so.</li>
+        <li><strong>Running out of memory:</strong> The final device is intended to function as a standalone computer with local and wide 
+            area network connectivity. Single board computers contain less memory than a typical computer, however. Running out of 
+            on-board memory would require restructuring the code base and rolling development features, either of these outcomes would 
+            jeopardize the project timeline and outcome.</li>
+        <li><strong>Choosing the right development tools for the job:</strong> It is difficult to know ahead of time every tool that will 
+            work best for this project.</li>
+        <li><strong>Forgetting a project section:</strong> It is possible that I may have overlooked some critical detail in the project 
+            outline. There is also a chance that the project could be significantly more complicated than it is presented to be. Both 
+            risks need to be addressed in the project timeline.</li>
+        <li><strong>Completing the project in the wrong order:</strong> Performing the development steps in the wrong order could lead to 
+            complex bugs involving electrical components. For example, a project task could involve parts or firmware that are incompatible 
+            with another section of the project. Troubleshooting a problem such as this could be time-consuming.</li>
     </ul>
     
     <h3><u>Mitigation Strategies</u></h3>
     <ul>
-        <li><strong>Broken or Missing Parts:</strong> I have done my best to include only parts mentioned by the tutorials that I encountered when designing this project. After ordering the first round of parts, I estimate that the lead time is somewhere between 5 and 7 days. I plan to prevent this sort of delay by organizing a dry run each week and checking the inventory for the next round. This way I can identify any missing or broken parts before it really becomes an issue.</li>
-        <li><strong>Running out of memory:</strong> Memory limitations are a real concern in firmware development since there is often limited on-board memory available for storing instructions. To combat this, I will need to use memory efficiently by applying algorithms and deleting memory objects to prevent memory leaks. The good news is that Arduino single board computers should contain enough memory to support most common driver functions. I expect the bigger task will be skimming the data from whatever port the device is communicating on. </li>
-        <li><strong>Choosing the right development tools:</strong> I have done my best to outline the tools and resources I plan to use in each stage of the project outline. That said, Murphy’s Law seems to imply that problems are bound to develop at some point in the project. The important thing is to stay flexible and recognize when a solution is not working as it was once expected. If a tool does not appear to be working, it may be time for a substitution. It is important to remain flexible and consider alternative tools and methods that can assist in moving the project forward.</li>
-        <li><strong>Completing project items in the wrong order:</strong> I have afforded myself a 4-week learning period that I can use to reassess the project design and make changes as I identify them. I believe this should provide plenty of time to identify out-of-order project goals. Each step requires a minimum number of new parts and I plan on keeping the number of sensors to a minimum over the course of this project. Each week provides an opportunity to reflect and change course if necessar</li>
+        <li><strong>Broken or Missing Parts:</strong> I have done my best to include only parts mentioned by the tutorials that I encountered 
+            when designing this project. After ordering the first round of parts, I estimate that the lead time is somewhere between 5 and 7 
+            days. I plan to prevent this sort of delay by organizing a dry run each week and checking the inventory for the next round. This 
+            way I can identify any missing or broken parts before it really becomes an issue.</li>
+        <li><strong>Running out of memory:</strong> Memory limitations are a real concern in firmware development since there is often limited 
+            on-board memory available for storing instructions. To combat this, I will need to use memory efficiently by applying algorithms 
+            and deleting memory objects to prevent memory leaks. The good news is that Arduino single board computers should contain enough 
+            memory to support most common driver functions. I expect the bigger task will be skimming the data from whatever port the device 
+            is communicating on. </li>
+        <li><strong>Choosing the right development tools:</strong> I have done my best to outline the tools and resources I plan to use in each 
+            stage of the project outline. That said, it is likely that unexpected problems will develop at some point in the project. 
+            The important thing is to stay flexible and recognize when a solution is not working as it was once expected. If a tool does not 
+            appear to be working, it may be time for a substitution. It is important to remain flexible and consider alternative tools and methods 
+            that can assist in moving the project forward.</li>
+        <li><strong>Completing project items in the wrong order:</strong> I have afforded myself a 4-week learning period that I can use to 
+            reassess the project design and make changes as I identify them. I believe this should provide plenty of time to identify 
+            out-of-order project goals. Each step requires a minimum number of new parts and I plan on keeping the number of sensors to a minimum 
+            over the course of this project. Each week provides an opportunity to reflect and change course if necessar</li>
     </ul>
 </body>
 </html>
