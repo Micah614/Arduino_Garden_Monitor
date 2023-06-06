@@ -1,0 +1,38 @@
+
+
+body {
+    font-family: veranda, Arial, Helvetica, sans-serif;
+}
+h1 {
+    font-size: 120%;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: red;
+}
+p {
+    font-size: 90%;
+}
+img {
+    max-width: 70%; 
+    max-height: auto;
+}
+#navigation_menu { <!-- This is an id selector. -->
+    border: 1px solid black;
+    padding: 40 px;
+    width: 60%;
+}
+.navigation_div {
+    border: 5px solid #000000;
+    width: 60%;
+    padding: 10px;
+    margin: 0px;
+    border-right: 1px solid #000000;
+    padding-right: 1px;
+    margin-right: 1px;
+}
+.warning {  <!-- This is a class selector. -->
+    font-weight: bold;
+}
