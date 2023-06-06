@@ -23,6 +23,12 @@
         font-size: 90%;
     }
 
+    #navigation_menu { <!-- This is an id selector. -->
+        border: 1px solid black;
+        padding: 40 px;
+        width: 60%;
+    }
+
     .navigation_div {
         border: 5px solid #000000;
         width: 60%;
@@ -32,13 +38,15 @@
         padding-right: 1px;
         margin-right: 1px;
     }
-    #navigation_menu { <!-- This is an id selector. -->
-        border: 1px solid black;
-        padding: 40 px;
-        width: 60%;
-    }
     .warning {  <!-- This is a class selector. -->
         font-weight: bold;
+    }
+    .image {
+        display: block;
+        max-width:60%;
+        max-height:80%;
+        width: auto;
+        height: auto;
     }
     </style>
     <!-- END OF CSS -->>
@@ -59,6 +67,6 @@
             as well as links to prior works and demonstration videos uploaded during the project.</li>
         </ul>
     </div>
-    <img src="pH_probe_plus_uno.jpg" alt="Uno board and the pH probe kit.">
+    <img src="pH_probe_plus_uno.jpg" alt="Uno board and the pH probe kit." class="image">
 </body>
 </html>
