@@ -6,6 +6,10 @@ body {
 h1 {
     font-size: 120%;
 }
+h3 {
+    text-decoration: underline;
+    font-weight: bold;
+}
 a {
     text-decoration: none;
 }
