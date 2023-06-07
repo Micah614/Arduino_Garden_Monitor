@@ -13,17 +13,8 @@ h3 {
 a {
     text-decoration: none;
 }
-table {
-    border: 1px solid;
-    width: 100%;
-    border-collapse: collapse;
-}
-th {
-    text-align: center;
-    text-decoration: underline;
-}
-td {
-    text-align: left;
+table, th, td {
+    border:1px solid black;
 }
 a:hover {
     color: red;
