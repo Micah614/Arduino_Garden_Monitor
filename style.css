@@ -16,14 +16,13 @@ a {
 table {
     border: 1px solid;
     width: 100%;
-    border-collapse: collapse;
 }
 th {
     text-align: center;
     text-decoration: underline;
 }
 td {
-    text-align: left;
+    text-align: center;
 }
 a:hover {
     color: red;
