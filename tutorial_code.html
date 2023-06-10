@@ -28,7 +28,7 @@
           <th>Weekly Timeline</th>
           <th>Activity Summary</th>
         </tr>
-        <tr>
+        <tr>ls
             <td><a href="">Week 1</a></td>
             <td>Week one was dedicated to defining an idea for the <a href="./proposal.html">Project Proposal.</a></td>
           </tr>
@@ -65,15 +65,44 @@
             <li>Chapter 4: Sending/Receiving Data Through a Serial Port</li>
         </ul>
         <h4><u>Week 2 Summary</u></h4>
-        <p>The majority of week two was spent writing the project proposal and developing the project timeline. The early chapters of 
-            this tutorial begin slowly and explain the basics of the Arduino IDE and how to create, compile and run your C/C++ firmware. 
-            The tutorial explains the various sys call functions used to drive electrical components and how to send instructions over a 
-            serial comm. port and receive data in a terminal window. Later in the semester, I will extract serial data, then process and 
-            store the information by a variety of means.
+        <p>
+            A large part of week two was spent completing the project proposal and developing the project 
+            timeline, but I did manage to squeeze in a few tutorials as well. 
             
-            <u><strong>This Week's Highlight:</strong></u> This tutorial drives down to the solder, explaining every physical detail of the circuit board and 
-            the electronic concepts at work in the example. This week, an interesting concept of Baud rate was introduced in Chapter 4 
-            of the tutorial.</p>
+            The early chapters of the tutorial start by explaining the basics of the Arduino integrated 
+            development environment (IDE), and how to create, compile, push and test C/C++ device firmware. 
+            This tutorial explain the basic concepts of driver functions, including the roles of the setup() 
+            and loop() driver methods and various system calls that can be used to control and communicate 
+            with various circuit components. 
+            
+            The Arduino IDE software is an incredibly durable, intuitive, robust and reliable development 
+            platform, in my opinion. The window pane layout of the Arduino IDE tool makes the purpose of 
+            each tool clear to the user and using each tool is remarkably straight-forward. Simply download 
+            the software on the Arduino website, and set up a folder for sketch files. The only downside that 
+            I did encounter was the incompatibility of the Arduino IDE with GitHub repository monitored files.
+            Apparently the GitHub environment space is too large and/or complex for the Arduino IDE to 
+            interpret and work with. 
+            
+            Although the IDE does not require many dependencies to install, the resulting sketch files 
+            create a fairly large number of dependencies, with a ratio somewhere in the range of 2-3 
+            additional files for every new sketch file that is created. The IDE software comes with its' 
+            own shell terminal, file manager, and text editor. Presumably at least some of these 
+            dependency files contain information required by one or more of the IDE software components.  
+            
+            Programming in the Arduino dialect of C/C++ feels like a mixture of object-oriented programming, 
+            syscalls, and Arduino-defined function calls (e.g., setup() and loop()) that abstract only the 
+            most rudimentary driver program functional requirements. Developers are free to define helper 
+            functions of almost any type, subject only to hardware-based memory limitations. (It is currently 
+            my understanding that available memory may be extended by the developer in numerous ways.)
+            
+            Apart from the findings given above, week 2's studies primarily discussed how to send and receive 
+            instructions over a serial communication port, effect LEDs on the project board, and how to
+            send and retrieve data from the IDE's terminal window. Later in the semester, I will extract 
+            serial data and investigate a variety of options for "extract-transform-load" (ETL) and 
+            "extract-load-transform" (ELT) data mining techniques using the serial sensor data collected 
+            from my experiments as an exploration medium for the subject.
+            
+        </p>
     </div>
 
     <div id="week_3">
