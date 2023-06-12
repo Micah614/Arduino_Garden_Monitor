@@ -64,47 +64,49 @@
             </td>
         </tr>
         <tr>
-          <td><a id="#week_3">Week 3</a></td>
-          <td>In week three, I extended the project website by 3 pages and inserted links between pages of the site.  (Arduino tutorials
-            are TBD)
-          </td>
+            <td>
+                <a id="#week_3">
+                    Week 3
+                </a>
+            </td>
+            <td>
+                In week three, I extended the project website by 3 pages and inserted links between pages of 
+                the site.
+            </td>
         </tr>
         <tr>
-            <td><a id="#week_4">Week 4</a></td>
-            <td>(More Tutorials, coming soon...)</td>
+            <td>
+                <a id="#week_4">
+                    Week 4
+                </a>
+            </td>
+            <td>
+                (More Tutorials, coming soon...)
+            </td>
         </tr>
         <tr>
-            <td><a id="#week_5">Week 5</a></td> 
-            <td>TBD</td>
+            <td>
+                <a id="#week_5">
+                    Week 5
+                </a>
+            </td> 
+            <td>
+                TBD
+            </td>
         </tr>
     </table>
-    <!-- End inner-page navigation menu table-->
+    <!-- End of the inner-page navigation menu table-->
     <hr>
 
     <!-- Start of Weekly Summaries-->
-    <div>
-        <h3>Week 1+2: Start a GitHub Pages Website, Submit Second Draft Proposal</h3>
-        <h4>
-            <u>
-                Tutorial Chapters:
-            </u>
-        </h4>
-        <ul>
-            <li>
-                Chapters 1&2: LED Blink/Flowing LED
-            </li>
-            <li>
-                Chapter 3: Control LED with a Push Button Switch
-            </li>
-            <li>
-                Chapter 4: Sending/Receiving Data Through a Serial Port
-            </li>
-        </ul>
+    <div> <!-- Save this div for CSS formatting. -->
         <h4 id="week_2">
-            <u>
-                Week 2 Summary
-            </u>
+            Week 1+2: Start a GitHub Pages Website, Submit Second Draft Proposal
         </h4>
+        <p>
+            This week covered more arduino circuit devices and transmitting instructions and data through a 
+            serial communication port.
+        </p>
         <p>
             A large part of week two was spent completing the project proposal and developing the project 
             timeline, but I did manage to squeeze in a few tutorials as well. 
@@ -141,12 +143,32 @@
             and use it to investigate a variety of "extract-transform-load" (ETL) and "extract-load-transform" 
             (ELT) methods, including SQL based data storage, XML and JSON file formats.
         </p>
+        <h5>
+            This Week's Breakdown:
+        </h5>
+        <ul>
+            <li>
+                <strong>
+                    <a href="#chapter_5">Chapter 5 - Analog-to-Digital Signal Converters and Serial Comm Links.</a>
+                </strong>
+            </li>
+            <li>
+                <strong>
+                    Chapter 6 - LEDPixel Driver
+                </strong>
+            </li>
+        </ul>
+
+        Chapters 1&2: LED Blink/Flowing LED
+        Chapter 3: Control LED with a Push Button Switch
+        Chapter 4: Sending/Receiving Data Through a Serial Port
+
 
             <img src="./Images/Arduino_IDE.png">
             <p><strong>Figure 1.)</strong> Snapshot of the Arduino integrated development environment (IDE).</p>
     </div>
 
-    <div >
+    <div>  <!-- Save this div for CSS formatting. -->
         <h4 id="week_3">
             Week 3: Extend the Project Website, Complete Project Board Tutorials
         </h4>
@@ -173,17 +195,14 @@
         <h5 id="chapter_5">
             Chapter 5 - Analog-to-Digital Converters ("ADC"s) in Serial Communication
         </h5>
-
         <p>
             ADC is used to convert analog (the physical signal) signals into digital signals (the abstract 
             message being transmitted between electronic devices). This section of the tutorial 
             explains how this signal transformation is achieved.
         </p>
-        
         <h5>
             Circuit Knowledge
         </h5>        
-        
         <p> 
             An ADC is an electronic circuit used to convert analog signals such as voltage to 
             digital or binary format consisting of 0's and 1's. The range of the ADC module included in the 
@@ -191,7 +210,6 @@
             resolution. This means that the ADC's voltage settings are evenly and reliably distributed into 
             1024 "discrete" voltages (ranging from 0 to 5V), each corresponding to a digital signal. 
         </p>
-        
         <img src="./Images/ADC_Graph.png">
         <p>
             <strong>Figure 2.)</strong> A graphical explaination of the potentiometer-drived analog-to-digital 
@@ -200,7 +218,6 @@
             behavior of this function, revealing the discretized voltage ranges corresponding to each digital 
             output.
         </p>
-        
         <p>
             This voltage setting is controlled with a circuit element called a "potentiometer", which is 
             essentially an adjustable resistor element. Potentiometers are typically controlled by a resistive 
