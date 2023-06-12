@@ -4,6 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="javascript.js"></script>
 
     <title>Arduino Tutorial Summaries</title>
 </head>
@@ -113,8 +114,69 @@
         <ul>
             <li>N/A - COMING SOON</li>
         </ul>
-        <h4><u>Week 3 Summary</u></h4>
-        <p></p>
+    
+        <h4>Chapter 5 - Analog-to-Digital Converters ("ADC"s) in Serial Communication</h4>
+
+        <p>ADC is used to convert analog (the physical signal) signals into digital signals (the abstract concept or message being transmitted between electronic devices). This section of the tutorial explains how this signal transformation is achieved.</p>
+        
+        <h4>Circuit Knowledge -- ADC</h4>        
+        
+        <p> 
+            An ADC is an electronic integrated circuit used to convert analog signals such as voltages to 
+            digital or binary format consisting of 0's and 1's. The range of the ADC module included in the 
+            project board is 10 bits, which means the ADC circuit component carries a 2^10 = 1024 bit 
+            resolution. This means that the ADC's voltage settings are evenly and reliably distributed into 
+            1024 "discrete" voltages (ranging from 0 to 5V), each corresponding to a digital signal. 
+        </p>
+        
+        <img src="./Images/ADC_Graph.png">
+        
+        <p>
+            This voltage setting is controlled with a circuit element called a "potentiometer", which is 
+            essentially an adjustable resistor element. Potentiometers are typically controlled by a resistive 
+            substance (e.g., a wire or a carbon element) and a contact brush. The resistance (and therefore 
+            voltage) of the potentiometer changes depending on the placement of the contact brush. The position 
+            of this contact brush is what provides the ADC with it's resolution capacity. The resistive surface 
+            is divided into discrete stages for the contact brush to rest upon. It is the position of this brush 
+            that effects the analog to digital signal transformation and determines the ADC's signal resolution.
+        </p>
+        
+        <p>
+            The potentiometer is the core electrical component of a turn dial knob, such as one might find in 
+            an old car radio. In fact, turn dials are sometimes called "rotary potentiometers", since they 
+            really just linear potentiometers with the physical action mapped to a rotational range of 
+            motion. Because each voltage must be mapped to a discrete digital signal, a calculation must be 
+            included in the driver code to complete the analog-to-digital signal transformation. 
+        </p>
+        
+        <h4>Experiment/Sketch:</h4>
+        <p>
+            This tutorial section demonstrates the core concepts of ADC by writing a program to read the 
+            current voltage of a rotary potentiometer and send this data to the IDE Serial Monitor window 
+            via a serial port connection (port 4, in this case). The following section is driver code 
+            collected from the tutorial.
+        </p>
+
+        <p>
+            ~~~~~~
+            int adcValue; // Define a variable to save ADC value
+            float voltage; // Define a variable to save the calculated voltage value
+            
+            void setup() {
+            Serial.begin(9600); // Initialize the serial port and set the baud rate to 9600
+            }
+            
+            void loop() {
+                adcValue = analogRead(A1); // Convert analog of pin A1 to digital
+                voltage = adcValue * (5.0 / 1023.0);// Calculate voltage according to digital
+                // Send the result to computer through serial
+                Serial.print("convertValue:");
+                Serial.println(adcValue);
+                Serial.print("Voltage:");
+                Serial.println(voltage);
+                delay(500);  # delay between signal transmission (keeps the screen serial monitor from expanding uncontrollably)
+            }
+        </p>
     </div>
 
     <hr>
