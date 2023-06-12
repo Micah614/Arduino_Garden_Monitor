@@ -33,26 +33,26 @@
           <th>Activity Summary</th>
         </tr>
         <tr>ls
-            <td><a href="week_2">Week 1</a></td>
+            <td><a href="#week_2">Week 1</a></td>
             <td>Week one was dedicated to defining an idea for the <a href="./proposal.html">Project Proposal.</a></td>
           </tr>
         <tr>
-          <td><a id="week_2">Week 2</a></td>
+          <td><a id="#week_2">Week 2</a></td>
           <td>Week two was mainly spent developing the project proposal and starting a GitHub website URL for the semester project. I 
             also completed the <a href="">first 4 chapters of the Arduino Project Board Tutorial.</a></td>
         </tr>
         <tr>
-          <td><a id="week_3">Week 3</a></td>
+          <td><a id="#week_3">Week 3</a></td>
           <td>In week three, I extended the project website by 3 pages and inserted links between pages of the site.  (Arduino tutorials
             are TBD)
           </td>
         </tr>
         <tr>
-            <td><a id="week_4">Week 4</a></td>
+            <td><a id="#week_4">Week 4</a></td>
             <td>(More Tutorials, coming soon...)</td>
         </tr>
         <tr>
-            <td><a id="week_5">Week 5</a></td> 
+            <td><a id="#week_5">Week 5</a></td> 
             <td>TBD</td>
         </tr>
     </table>
@@ -60,7 +60,7 @@
     <hr>
 
     <!-- Begin Weekly Summaries-->
-    <div id="week_2">
+    <div>
         <h3>Week 1+2: Start a GitHub Pages Website, Submit Second Draft Proposal</h3>
         <h4><u>Tutorial Chapters:</u></h4>
         <ul>
@@ -68,7 +68,7 @@
             <li>Chapter 3: Control LED with a Push Button Switch</li>
             <li>Chapter 4: Sending/Receiving Data Through a Serial Port</li>
         </ul>
-        <h4><u>Week 2 Summary</u></h4>
+        <h4 id="week_2"><u>Week 2 Summary</u></h4>
         <p>
             A large part of week two was spent completing the project proposal and developing the project 
             timeline, but I did manage to squeeze in a few tutorials as well. 
@@ -110,22 +110,27 @@
             <p><strong>Figure 1.)</strong> Snapshot of the Arduino integrated development environment (IDE).</p>
     </div>
 
-    <div id="week_3">
-        <h3>Week 3: Extend the Project Website, Complete Project Board Tutorials</h3>
-        <h4><u>Tutorial Chapters:</u></h4>
+    <div >
+        <h4 id="week_3">Week 3: Extend the Project Website, Complete Project Board Tutorials</h4>
         <p>The following tutorials were completed this week.</p>
+        <h5>This Week's Breakdown:</h5>
         <ul>
-            <li>N/A - COMING SOON</li>
+            <li>Chapter 5 - Analog-to-Digital Converters</li>
+            <li>Chapter 6 - ...</li>
         </ul>
     
-        <h4>Chapter 5 - Analog-to-Digital Converters ("ADC"s) in Serial Communication</h4>
+        <h5>Chapter 5 - Analog-to-Digital Converters ("ADC"s) in Serial Communication</h5>
 
-        <p>ADC is used to convert analog (the physical signal) signals into digital signals (the abstract concept or message being transmitted between electronic devices). This section of the tutorial explains how this signal transformation is achieved.</p>
+        <p>
+            ADC is used to convert analog (the physical signal) signals into digital signals (the abstract 
+            message being transmitted between electronic devices). This section of the tutorial 
+            explains how this signal transformation is achieved.
+        </p>
         
-        <h4>Circuit Knowledge -- ADC</h4>        
+        <h5>Circuit Knowledge -- ADC</h5>        
         
         <p> 
-            An ADC is an electronic integrated circuit used to convert analog signals such as voltages to 
+            An ADC is an electronic circuit used to convert analog signals such as voltage to 
             digital or binary format consisting of 0's and 1's. The range of the ADC module included in the 
             project board is 10 bits, which means the ADC circuit component carries a 2^10 = 1024 bit 
             resolution. This means that the ADC's voltage settings are evenly and reliably distributed into 
