@@ -168,26 +168,26 @@
         </p>
 
         <p>
-            ~~~~~~
-            int adcValue; // Define a variable to save ADC value
-            float voltage; // Define a variable to save the calculated voltage value
+            ~~~~~~<br>
+            int adcValue; // Define a variable to save ADC value<br>
+            float voltage; // Define a variable to save the calculated voltage value<br>
             
-            void setup() {
-            Serial.begin(9600); // Initialize the serial port and set the baud rate to 9600
-            }
+            void setup() {<br>
+            Serial.begin(9600); // Initialize the serial port and set the baud rate to 9600<br>
+            }<br>
             
-            void loop() {
-                adcValue = analogRead(A1); // Convert analog of pin A1 to digital
-                voltage = adcValue * (5.0 / 1023.0);// Calculate voltage according to digital. Discretizes voltage range into 1024 bins.
-                
-                // Send the result to computer through serial port.
-                Serial.print("convertValue:");
-                Serial.println(adcValue);  // convertValue ranges from 0 to 1023
+            void loop() {<br>
+                adcValue = analogRead(A1); // Convert analog of pin A1 to digital<br>
+                voltage = adcValue * (5.0 / 1023.0);// Calculate voltage according to digital. Discretizes voltage range into 1024 bins.<br>
+                <br>
+                // Send the result to computer through serial port.<br>
+                Serial.print("convertValue:");<br>
+                Serial.println(adcValue);  // convertValue ranges from 0 to 1023<br>
 
-                Serial.print("Voltage:");
-                Serial.println(voltage);  // 
-                delay(500);  # delay between signal transmission (keeps the screen serial monitor from expanding uncontrollably)
-            }
+                Serial.print("Voltage:");<br>
+                Serial.println(voltage);  // <br>
+                delay(500);  # delay between signal transmission (keeps the screen serial monitor from expanding uncontrollably)<br>
+            }<br>
         </p>
     </div>
 
