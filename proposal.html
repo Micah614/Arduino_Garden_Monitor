@@ -34,10 +34,10 @@
         exposure to the following career-related concepts...</p>
     <ul>
         <li>Object-Oriented Programming, C/C++</li>
-        <li>HTML/CSS, XML, and JavaScript needed to build a website</li>
-        <li>Building a REST API Web Application</li>
+        <li>Using HTML/CSS, XML, SQLite, JavaScript, and other programming languages.</li>
+        <li>REST API Web Application Development</li>
         <li>Contributing to a remote repository from a local development environment</li>
-        <li>Database Design</li>
+        <li>Database Design (for storing and transforming the sensor data)</li>
         <li>Network Drivers and Wireless I/O</li>
         <li>Real-Time Data Collection and Data Ingestion Methods</li>
         <li>Circuitry design</li>
@@ -158,27 +158,47 @@
             with another section of the project. Troubleshooting a problem such as this could be time-consuming.</li>
     </ul>
     
-    <h3><u>Mitigation Strategies</u></h3>
+    <h3>
+        <u>
+            Mitigation Strategies
+        </u>
+    </h3>
     <ul>
-        <li><strong>Broken or Missing Parts:</strong> I have done my best to include only parts mentioned by the tutorials that I encountered 
-            when designing this project. After ordering the first round of parts, I estimate that the lead time is somewhere between 5 and 7 
-            days. I plan to prevent this sort of delay by organizing a dry run each week and checking the inventory for the next round. This 
-            way I can identify any missing or broken parts before it really becomes an issue.</li>
-        <li><strong>Running out of memory:</strong> Memory limitations are a real concern in firmware development since there is often limited 
-            on-board memory available for storing instructions. To combat this, I will need to use memory efficiently by applying algorithms 
-            and deleting memory objects to prevent memory leaks. The good news is that Arduino single board computers should contain enough 
-            memory to support most common driver functions. I expect the bigger task will be skimming the data from whatever port the device 
-            is communicating on. </li>
-        <li><strong>Choosing the right development tools:</strong> I have done my best to outline the tools and resources I plan to use in each 
+        <li>
+            <strong>Broken or Missing Parts:</strong> You can find a list of project materials <a href="./tut
+            " target=”_blank”>here</a>. After ordering the first round of parts, I estimated that the lead 
+            time is somewhere between 5 and 7 days for replacement parts. I plan to organize dry run roughly 
+            once a week, which should provide time to check the inventory before the next round of development. 
+            That way I can identify any missing or broken parts before they become an issue.
+        </li>
+        <li>
+            <strong>Running out of memory:</strong> Memory limitations are a legitimate concern when developing 
+            firmware for small computers since there is often limited memory available in these devices. 
+            Recent advances in data storage technology could offer a method to help combat this problem however, 
+            and I plan to investigate USB storage expansion options if the occasion is ever encountered. 
+            
+            Besides expanding the physical memory of the device, I will also need to exercise optimization 
+            techniques (to exercise temporal/spatial locality) and look for opportunities to substitute with 
+            more efficient algorithsm to make better use of the firmware memory space.             
+        </li>
+        <li>
+            <strong>Choosing the right development tools:</strong> I have done my best to outline the tools and resources I plan to use in each 
             stage of the project outline. That said, it is likely that unexpected problems will develop at some point in the project. 
             The important thing is to stay flexible and recognize when a solution is not working as it was once expected. If a tool does not 
             appear to be working, it may be time for a substitution. It is important to remain flexible and consider alternative tools and methods 
-            that can assist in moving the project forward.</li>
-        <li><strong>Completing project items in the wrong order:</strong> I have afforded myself a 4-week learning period that I can use to 
+            that can assist in moving the project forward.
+        </li>
+        <li>
+            <strong>Completing project items in the wrong order:</strong> I have afforded myself a 4-week learning period that I can use to 
             reassess the project design and make changes as I identify them. I believe this should provide plenty of time to identify 
             out-of-order project goals. Each step requires a minimum number of new parts and I plan on keeping the number of sensors to a minimum 
-            over the course of this project. Each week provides an opportunity to reflect and change course if necessar</li>
+            over the course of this project. Each week provides an opportunity to reflect and change course if necessar
+        </li>
     </ul>
+
+    <p>
+        Visit the tutorial code documentation to read about the first half of this 12 week (1 credit) project.
+    </p>
 
     <!--Navigation Menu-->
     <hr>
