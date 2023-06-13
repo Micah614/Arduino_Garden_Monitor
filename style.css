@@ -17,13 +17,26 @@ table {
     border: 1px solid;
     width: 100%;
 }
-th {
+td, th {
+    border: 1px solid rgb(190,190,190)
     text-align: center;
     text-decoration: underline;
 }
 td {
     text-align: center;
 }
+tr:nth-child(even) {
+    background-color: #eee;
+}
+th[scope='col'] {
+    background-color: #696969;
+    color: #fff;
+}
+
+
+
+
+
 a:hover {
     color: red;
 }
