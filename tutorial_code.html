@@ -137,16 +137,15 @@
             <strong>Figure 1.)</strong> Snapshot of the Arduino integrated development environment (IDE).
         </p>
         <h5>
-            Chapters 1: LED Blink
+            Chapter 1: LED Blink
         </h5>
         <p>
             Chapter one of this tutorial explains the concept of converting analog to digital signals. The 
             chapter describes the LED circuit and the role of the "setup()", "loop()", "delay()" and 
             "digitalWrite()" functions in firmware. Each of these principles is demostrated through a 
-            firmware program designed to drive a blinking LED.
+            firmware program designed to drive a blinking LED. <br> <br>
             
-            <b>Sketch: LED_Blink</b> <br> 
-            <b>/* Chapter 1 */</b> <br> 
+            <b>Sketch: LED_Blink</b> <br> <br> 
             // the setup function runs once when you press reset or power the board <br> 
             void setup() { <br> 
               // initialize digital pin 13 as an output <br> 
@@ -167,38 +166,10 @@
         <p>
             Chapter 2 of this material demonstrates the object-oriented nature of firmware development by using 
             loops and basic data structures (i.e., arrays) to synchronize and control circuits of electronic 
-            devices, in this case, a panel of LEDs.
+            devices, in this case, a panel of LEDs. <br> <br> 
             
-            <b>Sketch: Flowing_LED_Display</b> <br> 
-            <b>/* Chapter 2 */</b> <br> 
-            const int ledCount = 14; // the number of LEDs <br> 
-            // an array of pin numbers to which LEDs are attached <br> 
-            int ledPins[] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 }; <br> 
-            void setup() { <br> 
-              // loop over the pin array and set them all to output: <br> 
-              for (int i = 0; i < ledCount; i++) { <br> 
-                pinMode(ledPins[i], OUTPUT); <br> 
-              } <br> 
-            } <br> 
-            void loop() { <br> 
-              // the ith LED will light up in turn <br> 
-              for (int i = 0; i < ledCount; i++) { <br> 
-                barGraphDisplay(i); <br> 
-              } <br> 
-              for (int i = ledCount-1; i >=0; i--) { <br> 
-                barGraphDisplay(i); <br> 
-              } <br> 
-            } <br> 
-            void barGraphDisplay(int ledOn) { <br> 
-              // make the "ledOn"th LED on and the others off <br> 
-              for (int i = 0; i < ledCount; i++) { <br> 
-                if (i == ledOn) <br> 
-                  digitalWrite(ledPins[i], HIGH); <br> 
-                else <br> 
-                  digitalWrite(ledPins[i], LOW); <br> 
-              } <br> 
-              delay(100); <br> 
-            } <br> 
+            <img src="./Images/Flowing_LED_Display.jpg">
+
         </p>
 
         <h5>
