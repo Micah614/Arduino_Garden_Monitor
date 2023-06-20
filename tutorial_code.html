@@ -111,7 +111,7 @@
             any kind, subject only to the hardware constraints of the single-board the firmware is loaded on. 
         </p>
 
-        <img src="./Images/Arduino_IDE.png">
+        <img src="./Images/Arduino_IDE.png"> <br> 
         <p>
             <strong>Figure 1.)</strong> Snapshot of the Arduino integrated development environment (IDE).
         </p>
@@ -124,7 +124,7 @@
             "digitalWrite()" functions in firmware. Each of these principles is demostrated through a 
             firmware program designed to drive a blinking LED.
             
-            <b>(Code from the Freenove Project Board tutorial manual)</b> <br>
+            <b>Sketch: LED_Blink</b> <br> 
             <b>/* Chapter 1 */</b> <br> 
             // the setup function runs once when you press reset or power the board <br> 
             void setup() { <br> 
@@ -148,7 +148,7 @@
             loops and basic data structures (i.e., arrays) to synchronize and control circuits of electronic 
             devices, in this case, a panel of LEDs.
             
-            <b>(Code from the Freenove Project Board tutorial manual)</b> <br> 
+            <b>Sketch: Flowing_LED_Display</b> <br> 
             <b>/* Chapter 2 */</b> <br> 
             const int ledCount = 14; // the number of LEDs <br> 
             // an array of pin numbers to which LEDs are attached <br> 
@@ -184,9 +184,29 @@
             Chapter 3: Control LED with a Push Button Switch
         </h5>
         <p>
-            Chapter 3 of this tutorial explains the circuit fundamentals of a basic switch. 
+            Chapter 3 of this tutorial explains the circuit fundamentals of controlling circuit behavior with a 
+            button-based switch. 
             
-            <img src="./Images/button_circuit_diagram.svg">
+            <img src="./Images/button_circuit_diagram.svg"> <br> 
+            <img src="./Images/project_board_schematic.svg"> <br> 
+
+
+            <b>Sketch: Control_LED_by_Button</b> <br> 
+            <b>/* Chapter 3 - mini-project 1 */</b> <br> 
+            /* This sketch maps the voltage detected on a closed circuit created by the button to an 
+               LED ON state that persists as long as the button is held down. */ <br> 
+            int buttonPin = 2; // the number of the push button pin <br> 
+            int ledPin = 13; // the number of the LED pin <br> 
+            void setup() { <br> 
+              pinMode(buttonPin, INPUT); // set push button pin into input mode. (says "read the signal here.") <br> 
+              pinMode(ledPin, OUTPUT); // set LED pin into output mode. (says "affect the cicuit component at this location.") <br> 
+            } <br> 
+            void loop() { <br> 
+              if (digitalRead(buttonPin) == HIGH) // if the button is not pressed <br> 
+                digitalWrite(ledPin, LOW); // switch off LED <br> 
+              else // if the button is pressed <br> 
+                digitalWrite(ledPin, HIGH); // switch on LED <br> 
+            } <br> 
 
         </p>
         <h5>
@@ -194,6 +214,8 @@
         </h5>
         <p>
             asdfasdkgnaoiusnvoamdimap ia spodvpoa ivna voina svoi n 
+
+
         </p>
     </div>
 
