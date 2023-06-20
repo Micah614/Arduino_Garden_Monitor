@@ -81,77 +81,120 @@
     <!-- Start of Weekly Summaries-->
     <div> <!-- Save this div for CSS formatting. -->
         <h4 id="week_1_and_2">
-            Week 1+2: Start a GitHub Pages Website, Start Tutorial, Submit Second Draft Proposal
+            Week 1+2: Start a GitHub Pages Website, Start Tutorial, Develop and Submit a Proposal
         </h4>
         <p>
-            This week covered more arduino circuit devices and transmitting instructions and data through a 
-            serial communication port.
+            A large part of week 1+2 was spent developing the project proposal and crafting a project timeline. 
+            Early chapters of the project board tutorial (completed in week 2) explain the basics of the Arduino 
+            integrated development environment (IDE), as well as how to create, compile, push and test Arduino 
+            firmware.
+
+            The project board tutorial explains the basic concepts of driver functions, including the roles of 
+            the setup() and loop() driver methods and how to use system calls to control and communicate with 
+            prototype electronics via comm. hubs, electrical circuits, and free-range communication exchange 
+            media (e.g., infrared, RFID, etc.).
+            
+            The Arduino IDE software provides a feature rich and intuitive development platform. The set up 
+            involves a simple download from the official Arduino website, and choosing a folder to contain future 
+            source files. The only pitfall that I encountered during this set up was an apparent incompatibility 
+            of Arduino IDE generated files and the GitHub repository stored on my local computer. According to 
+            the generated error messages, the GitHub repository on my local computer creates an environment that 
+            is too complex for the Arduino IDE to interact with. While investigating this finding, I observed 
+            that each sketch (another term for an Arduino source file) generates a number of dependency files 
+            during compile time, producing a "bloat ratio" in the range of 2-3 new files for each new sketch. 
+            GitHub compatiblity issues aside, the IDE software provides a great list of features including a 
+            file manager, terminal shell, and editor.
+            
+            Programming in the Arduino dialect of C++ involves a mixture of object-oriented programming, 
+            development of sys- and trap- calls, and tactful use of Arduino-defined function stems, including 
+            "setup()", "loop()", and "digitalWrite()". Arduino developers are free to define helper functions of 
+            any kind, subject only to the hardware constraints of the single-board the firmware is loaded on. 
         </p>
-        <p>
-            A large part of week two was spent completing the project proposal and developing the project 
-            timeline, but I did manage to squeeze in a few tutorials as well. 
-            
-            The early chapters of the tutorial start by explaining the basics of the Arduino integrated 
-            development environment (IDE), and how to create, compile, push and test C/C++ device firmware. 
-            This tutorial explain the basic concepts of driver functions, including the roles of the setup() 
-            and loop() driver methods and various system calls that can be used to control and communicate 
-            with various circuit components. 
-            
-            The Arduino IDE software is an incredibly durable, intuitive, robust and reliable development 
-            platform, in my opinion. The window pane layout of the Arduino IDE tool makes the purpose of 
-            each tool clear to the user and using each tool is remarkably straight-forward. Simply download 
-            the software on the Arduino website, and set up a folder for sketch files. The only downside that 
-            I did encounter was the incompatibility of the Arduino IDE with GitHub repository monitored files.
-            Apparently the GitHub environment space is too large and/or complex for the Arduino IDE to 
-            interpret and work with. 
-            
-            Although the IDE does not require many dependencies to install, the resulting sketch files 
-            create a fairly large number of dependencies, with a ratio somewhere in the range of 2-3 
-            additional files for every new sketch file that is created. The IDE software comes with its' 
-            own shell terminal, file manager, and text editor. Presumably at least some of these 
-            dependency files contain information required by one or more of the IDE software components.  
-            
-            Programming in the Arduino IDE involves a mixture of C/C++ object-oriented programming, syscalls, 
-            and Arduino-defined function stems (e.g., "setup()" and "loop()"). Developers are free to define 
-            helper functions of any kind, subject only to the memory constraints of the single-board 
-            computer the firmware is loaded on. 
-            
-            Week 2's tutorial material primarily discussed the manner data is sent and received across a 
-            serial communication port, including communicating with a device by submitting instructions through 
-            a terminal.
-            Later this semester I will extract very similar time-series information from a system of my own design 
-            and use it to investigate a variety of "extract-transform-load" (ETL) and "extract-load-transform" 
-            (ELT) methods, including SQL based data storage, XML and JSON file formats.
-        </p>
+
         <img src="./Images/Arduino_IDE.png">
         <p>
             <strong>Figure 1.)</strong> Snapshot of the Arduino integrated development environment (IDE).
         </p>
-
         <h5>
-            This Week's Breakdown:
+            Chapters 1: LED Blink
         </h5>
         <p>
-            Weeks 1 and 2 were busy, so we will skip over the first 4 tutorials for now and pick it up in 
-            week 3. Here's a list of the tutorial chapters completed in week 2.
+            Chapter one of this tutorial explains the concept of converting analog to digital signals. The 
+            chapter describes the LED circuit and the role of the "setup()", "loop()", "delay()" and 
+            "digitalWrite()" functions in firmware. Each of these principles is demostrated through a 
+            firmware program designed to drive a blinking LED.
+            
+            <b>(Code from the Freenove Project Board tutorial manual)</b> <br>
+            <b>/* Chapter 1 */</b> <br> 
+            // the setup function runs once when you press reset or power the board <br> 
+            void setup() { <br> 
+              // initialize digital pin 13 as an output <br> 
+              pinMode(13, OUTPUT); <br> 
+            } <br> 
+            // the loop function runs over and over again forever <br> 
+            void loop() { <br> 
+              digitalWrite(13, HIGH); // turn the LED on (HIGH is the voltage level) <br> 
+              delay(1000); // wait for a second <br> 
+              digitalWrite(13, LOW); // turn the LED off by making the voltage LOW <br> 
+              delay(1000); // wait for a second <br> 
+            } <br> 
         </p>
-        <ul>
-            <li>
-                <strong>
-                    Chapters 1&2: LED Blink/Flowing LED
-                </strong>
-            </li>
-            <li>
-                <strong>
-                    Chapter 3: Control LED with a Push Button Switch
-                </strong>
-            </li>
-            <li>
-                <strong>
-                    Chapter 4: Sending/Receiving Data Through a Serial Port
-                </strong>
-            </li>
-        </ul>
+
+        <h5>
+            Chapter 2: Flowing LED
+        </h5>
+        <p>
+            Chapter 2 of this material demonstrates the object-oriented nature of firmware development by using 
+            loops and basic data structures (i.e., arrays) to synchronize and control circuits of electronic 
+            devices, in this case, a panel of LEDs.
+            
+            <b>(Code from the Freenove Project Board tutorial manual)</b> <br> 
+            <b>/* Chapter 2 */</b> <br> 
+            const int ledCount = 14; // the number of LEDs <br> 
+            // an array of pin numbers to which LEDs are attached <br> 
+            int ledPins[] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 }; <br> 
+            void setup() { <br> 
+              // loop over the pin array and set them all to output: <br> 
+              for (int i = 0; i < ledCount; i++) { <br> 
+                pinMode(ledPins[i], OUTPUT); <br> 
+              } <br> 
+            } <br> 
+            void loop() { <br> 
+              // the ith LED will light up in turn <br> 
+              for (int i = 0; i < ledCount; i++) { <br> 
+                barGraphDisplay(i); <br> 
+              } <br> 
+              for (int i = ledCount-1; i >=0; i--) { <br> 
+                barGraphDisplay(i); <br> 
+              } <br> 
+            } <br> 
+            void barGraphDisplay(int ledOn) { <br> 
+              // make the "ledOn"th LED on and the others off <br> 
+              for (int i = 0; i < ledCount; i++) { <br> 
+                if (i == ledOn) <br> 
+                  digitalWrite(ledPins[i], HIGH); <br> 
+                else <br> 
+                  digitalWrite(ledPins[i], LOW); <br> 
+              } <br> 
+              delay(100); <br> 
+            } <br> 
+        </p>
+
+        <h5>
+            Chapter 3: Control LED with a Push Button Switch
+        </h5>
+        <p>
+            Chapter 3 of this tutorial explains the circuit fundamentals of a basic switch. 
+            
+            <img src="./Images/button_circuit_diagram.svg">
+
+        </p>
+        <h5>
+            Chapter 4: Sending/Receiving Data Through a Serial Communication Port
+        </h5>
+        <p>
+            asdfasdkgnaoiusnvoamdimap ia spodvpoa ivna voina svoi n 
+        </p>
     </div>
 
     <div>  <!-- Save this div for CSS formatting. -->
