@@ -178,9 +178,14 @@
             button-based switch. 
             
             <img src="./Images/button_circuit_diagram.svg"> <br> 
-            <strong>Figure 2.)</strong> A diagram of a button-controlled circuit. <br> <br>
+            <p>
+                <strong>Figure 2.)</strong> A diagram of a button-controlled circuit.
+            </p>
+
             <img src="./Images/project_board_schematic.jpg"> <br> 
-            <strong>Figure 3.)</strong> Control state of the project board. (IDE). <br> <br> 
+            <p>
+                <strong>Figure 3.)</strong> Control state of the project board. (IDE).
+            </p>
 
             The first sub-section of this chapter discusses how the voltage state of the circuit in figure 3 
             can be encoded as a meaningful signal state by applying the firmware to the control board set to 
@@ -229,23 +234,8 @@
             Week 3: Extend the Project Website, Complete Project Board Tutorials
         </h4>
         <h5>
-            Week 3 Summary: Tutorials
+            Week 3 Tutorial Summary, Chapter 5 - Analog-to-Digital Converters ("ADC"s) in Serial Communication
         </h5>
-        <p>
-
-        </p>    
-        <h5>
-            Chapter 5 - Analog-to-Digital Converters ("ADC"s) in Serial Communication
-        </h5>
-        <p>
-            ADC is used to convert analog (the physical signal) signals into digital signals (the abstract 
-            message being transmitted between electronic devices). This section of the tutorial 
-            explains how this signal transformation is achieved.
-        </p>
-
-        <h5>
-            Circuit Knowledge
-        </h5>        
         <p> 
             An ADC is an electronic circuit used to convert analog signals such as voltage to 
             digital or binary format consisting of 0's and 1's. The range of the ADC module included in the 
@@ -270,7 +260,6 @@
             is divided into discrete stages for the contact brush to rest upon. It is the position of this brush 
             that effects the analog to digital signal transformation and determines the ADC's signal resolution.
         </p>
-        
         <p>
             The potentiometer is the core electrical component of a turn dial knob, such as one might find in 
             an old car radio. In fact, these turn dials are sometimes called "rotary potentiometers", since they 
@@ -278,8 +267,6 @@
             motion. Because each voltage must be mapped to a discrete digital signal, a calculation must be 
             included in the driver code to complete the analog-to-digital signal transformation. 
         </p>
-        
-        <h4>Experiment/Sketch:</h4>
         <p>
             This tutorial section demonstrates the core concepts of ADC by writing a program to read the 
             current voltage of a rotary potentiometer and send this data to the IDE Serial Monitor window 
