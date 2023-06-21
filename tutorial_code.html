@@ -144,20 +144,6 @@
             chapter describes the LED circuit and the role of the "setup()", "loop()", "delay()" and 
             "digitalWrite()" functions in firmware. Each of these principles is demostrated through a 
             firmware program designed to drive a blinking LED. <br> <br>
-            
-            <b>Sketch: LED_Blink</b> <br> <br> 
-            // the setup function runs once when you press reset or power the board <br> 
-            void setup() { <br> 
-              // initialize digital pin 13 as an output <br> 
-              pinMode(13, OUTPUT); <br> 
-            } <br> 
-            // the loop function runs over and over again forever <br> 
-            void loop() { <br> 
-              digitalWrite(13, HIGH); // turn the LED on (HIGH is the voltage level) <br> 
-              delay(1000); // wait for a second <br> 
-              digitalWrite(13, LOW); // turn the LED off by making the voltage LOW <br> 
-              delay(1000); // wait for a second <br> 
-            } <br> 
         </p>
 
         <h5>
@@ -202,18 +188,18 @@
             causing the firmware to react rapidly to the perceived ON/OFF state detected in the circuit. <br> <br> 
         </p>
         <p>
-            We can see how this sleep()-like system call is applied in the driver firmware by reading the sketch 
+            We can see how this sleep-like system call is applied in the driver firmware by reading the sketch 
             code snippet below. <br> <br> 
-            <img src="./Images/Control_LED_State_by_Button.jpg">
         </p>
+        <img src="./Images/Control_LED_State_by_Button.jpg">
 
         <h5>
             Chapter 4: Sending/Receiving Data Through a Serial Communication Port (AKA "Comm. Port")
         </h5>
         <p>
-            Chapter 4 discusses the basics of serial (AKA "Universal Asynchronous Receiver/Transmitter (UART)") protocol, in which 
-            two communicating devices claim designated transmitting and receiving ports used to communicate with another device or 
-            intercept signals on a network it connects with. The code knowledge of this section explains the role of interruption 
+            Chapter 4 discusses the basics of serial communication (AKA "Universal Asynchronous Receiver/Transmitter (UART)") protocols, 
+            in which two communicating devices claim designated transmitting and receiving ports used to communicate with another device 
+            or intercept signals on a network it connects with. The code knowledge of this section explains the role of interruption 
             programs (AKA "system calls") in collecting asynchronous feedback from connected or communicating devices. This 
             block quote from the tutorial provides a good analogy for the subject: <br> 
             <blockquote>
@@ -226,21 +212,22 @@
             possible while conserving computational resources.
         </p>
         <p>
-            The source code from this section is surprisingly bland, considering the profundity of the concepts just discussed.
+            The following source code sets up a 9600 Baud rate communication speed between the terminal and board, then prints a rolling 
+            script prompt. When a user types a message into the terminal, the message is received by the control board, which echoes it 
+            back to the terminal. The terminal prints the response quickly and immediately resumes counting. This simple two-way 
+            communication demonstrates the core concept of asynchronous serial communication.
         </p>
-
         <img src="./Images/Receive_Data_Through_Serial_Port.jpg">
-
     </div>
 
-
     <hr> <!-- BEGIN WEEK 3 -->
+
     <div>  <!-- Save this div for CSS formatting. -->
         <h4 id="week_3">
             Week 3: Extend the Project Website, Complete Project Board Tutorials
         </h4>
         <h5>
-            Week 3 Tutorial Summary, Chapter 5 - Analog-to-Digital Converters ("ADC"s) in Serial Communication
+            Tutorial Summary, Chapter 5 - Analog-to-Digital Converters ("ADC"s) in Serial Communication
         </h5>
         <p> 
             An ADC is an electronic circuit used to convert analog signals such as voltage to 
@@ -291,18 +278,21 @@
             Week 4 Summary: Tutorial Chapter 6 - RGB LED
         </h5>
         <p>
-            Week 4 covered project board tutorial chapter 6, which includes a fun mini-project to control a 3-color LED using a 
-            3-knob potentiometer. The idea is that the different colors of light mix together, emitting a special color.
+            Chapter 6 integrates topics from all previous chapters with a fun mini-project to control a 3-color LED using a 
+            3-knob potentiometer. The idea is that the different colors of light (red, green, and blue) mix together and emit a special 
+            color that the user can adjust. This exercise involves the mapping of potentiometer states to a LED output in 3 separate 
+            channels.
+
+
         </p>   
         <h5>
             Week 4 Summary: Project Research
         </h5>
         <p>
-            This week I investigated ... <br> <br> 
-
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/dWM4p_KaTHY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            This week I completed some research on what software 
+             
         </p>
-
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dWM4p_KaTHY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
         <hr> <!-- BEGIN WEEK 5 -->
 
