@@ -255,7 +255,7 @@
         <img src="./Images/ADC_Graph.png">
         <p>
             <strong>Figure 2.)</strong> A graphical explaination of the potentiometer-drived analog-to-digital 
-            conversion, also called "ADC". The rotational potentiometer included in the project board 
+            conversion, also known as "ADC". The rotational potentiometer included in the project board 
             achieves 1024 unique states, each equating to a unique binary/digital output. Note the step-like 
             behavior of this function, revealing the discretized voltage ranges corresponding to each digital 
             output.
@@ -286,29 +286,7 @@
             collected from the tutorial.
         </p>
 
-        <p>
-            ~~~~~~<br>
-            int adcValue; // Define a variable to save ADC value<br>
-            float voltage; // Define a variable to save the calculated voltage value<br>
-            
-            void setup() {<br>
-            Serial.begin(9600); // Initialize the serial port and set the baud rate to 9600<br>
-            }<br>
-            
-            void loop() {<br>
-                adcValue = analogRead(A1); // Convert analog of pin A1 to digital<br>
-                voltage = adcValue * (5.0 / 1023.0);// Calculate voltage according to digital. Discretizes voltage range into 1024 bins.<br>
-                <br>
-                // Send the result to computer through serial port.<br>
-                Serial.print("convertValue:");<br>
-                Serial.println(adcValue);  // convertValue ranges from 0 to 1023<br>
-
-                Serial.print("Voltage:");<br>
-                Serial.println(voltage);  // <br>
-                delay(500);  # delay between signal transmission (keeps the screen serial monitor from expanding uncontrollably)<br>
-            }<br>
-            ~~~~~~<br>
-        </p>
+        <img src="./Images/ADC_Read_Voltage.jpg"> <br> <br> 
 
         <hr> <!-- BEGIN WEEK 4 -->
 
