@@ -186,22 +186,7 @@
             can be encoded as a meaningful signal state by applying the firmware to the control board set to 
             the configuration shown in figure 3. <br> 
 
-            <b>Sketch: Control_LED_by_Button</b> <br> 
-            <b>/* Chapter 3 - mini-project 1 */</b> <br> 
-            /* This sketch maps the voltage detected on a closed circuit created by the button to an 
-               LED ON state that persists as long as the button is held down. */ <br> 
-            int buttonPin = 2; // the number of the push button pin <br> 
-            int ledPin = 13; // the number of the LED pin <br> 
-            void setup() { <br> 
-              pinMode(buttonPin, INPUT); // set push button pin into input mode. (says "read the signal here.") <br> 
-              pinMode(ledPin, OUTPUT); // set LED pin into output mode. (says "affect the cicuit component at this location.") <br> 
-            } <br> 
-            void loop() { <br> 
-              if (digitalRead(buttonPin) == HIGH) // if the button is not pressed <br> 
-                digitalWrite(ledPin, LOW); // switch off LED <br> 
-              else // if the button is pressed <br> 
-                digitalWrite(ledPin, HIGH); // switch on LED <br> 
-            } <br> 
+            <img src="./Images/Control_LED_by_Button.jpg"> <br>
 
             The second sketch design maintains the "ON" or "OFF" state of the LED subcircuit until the button 
             is pressed again. This is commonly referred to as programming a "persistant state" in the controller. 
@@ -213,37 +198,8 @@
             causing the firmware to react rapidly to the perceived ON/OFF state detected in the circuit. <br> <br> 
 
             We can see how this sleep()-like system call is applied in the driver firmware by reading the sketch 
-            code snippet below. <br> 
-
-            <b>Sketch: Control_LED_State_by_Button</b> <br> 
-            <b>/* Chapter 3 - mini-project 2 */</b> <br> 
-            int buttonPin = 2; // the number of the push button pin <br> 
-            int ledPin = 13; // the number of the LED pin <br> 
-            boolean isLighting = false; // define a variable to save the state of LED <br> 
-            void setup() { <br> 
-              pinMode(buttonPin, INPUT); // set push button pin into input mode <br> 
-              pinMode(ledPin, OUTPUT); // set LED pin into output mode <br> 
-            } <br> 
-            void loop() { <br> 
-              if (digitalRead(buttonPin) == LOW) { // if the button is pressed <br> 
-                delay(10); // delay for a certain time to skip the bounce <br> 
-                if (digitalRead(buttonPin) == LOW) { // confirm again if the button is pressed <br> 
-                  reverseLED(); // reverse LED <br> 
-                  while (digitalRead(buttonPin) == LOW); // wait for releasing <br> 
-                    delay(10); // delay for a certain time to skip bounce when the button is released <br> 
-                } <br> 
-              } <br> 
-            } <br> 
-            void reverseLED() { <br> 
-              if (isLighting) { // if LED is lighting, <br> 
-                digitalWrite(ledPin, LOW); // switch off LED <br> 
-                isLighting = false; // store the state of LED <br> 
-              } <br> 
-              else { // if LED is off, <br> 
-                digitalWrite(ledPin, HIGH); // switch LED <br> 
-                isLighting = true; // store the state of LED <br> 
-              } <br> 
-            } <br>  <br> 
+            code snippet below. <br> <br> 
+            <img src="./Images/Control_LED_State_by_Button.jpg">
         </p>
 
         <h5>
@@ -271,8 +227,8 @@
             <blockquote>
                 ...suppose you're watching TV while there is water heating in your kitchen... (without a teakettle spout) you have to 
                 check whether the water is boiling or not from time to time, so you can't concentrate on watching TV. But (with) an 
-                interrupt, things (are) different. Interrupts work much like the lid on your teakettle, ... whistles when the water is 
-                beginning to boil. ... (So) you can focus on watching TV ..."
+                interrupt, things are different. Interrupts work much like the lid on your teakettle, ... it whistles when the water is 
+                beginning to boil ... so you can focus on watching TV ..."
             </blockquote>
             The role of the interrupt program is to allow the processor to facilitate the execution of as many tasks (or programs) as 
             possible while conserving computational resources.
