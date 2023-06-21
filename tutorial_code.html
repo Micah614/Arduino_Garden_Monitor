@@ -176,18 +176,22 @@
         <p>
             Chapter 3 of this tutorial explains the circuit fundamentals of controlling circuit behavior with a 
             button-based switch. 
-            
-            <img src="./Images/button_circuit_diagram.svg"> <br> 
-            <p>
-                <strong>Figure 2.)</strong> A diagram of a button-controlled circuit.
-            </p>
-
+        </p>
+        
+        <img src="./Images/button_circuit_diagram.svg"> <br> 
+        
+        <p>
+            <strong>Figure 2.)</strong> A diagram of a button-controlled circuit.
+        </p>
+        <p>
             The first sub-section of this chapter discusses how the voltage state of the circuit in figure 3 
             can be encoded as a meaningful signal state by applying the firmware to the control board set to 
-            the configuration shown in figure 3. <br> 
+            the configuration shown in figure 3. <br> <br> 
+        </p>
+        
+        <img src="./Images/Control_LED_by_Button.jpg"> <br>
 
-            <img src="./Images/Control_LED_by_Button.jpg"> <br>
-
+        <p>
             The second sketch design maintains the "ON" or "OFF" state of the LED subcircuit until the button 
             is pressed again. This is commonly referred to as programming a "persistant state" in the controller. 
             Included in the circuit knowledge of this chapter is a discussion about controlling "bounce" in 
@@ -196,7 +200,8 @@
             the interpretation of an electrical state signal. If bounce is left uncontrolled by the device 
             firmware, the state of the controlling device (i.e., button) is read during a period of oscillation, 
             causing the firmware to react rapidly to the perceived ON/OFF state detected in the circuit. <br> <br> 
-
+        </p>
+        <p>
             We can see how this sleep()-like system call is applied in the driver firmware by reading the sketch 
             code snippet below. <br> <br> 
             <img src="./Images/Control_LED_State_by_Button.jpg">
@@ -220,10 +225,16 @@
             The role of the interrupt program is to allow the processor to facilitate the execution of as many tasks (or programs) as 
             possible while conserving computational resources.
         </p>
+        <p>
+            The source code from this section is surprisingly bland, considering the profundity of the concepts just discussed.
+        </p>
+
+        <img src="./Images/Receive_Data_Through_Serial_Port.jpg">
+
     </div>
 
-    <hr> <!-- BEGIN WEEK 3 -->
 
+    <hr> <!-- BEGIN WEEK 3 -->
     <div>  <!-- Save this div for CSS formatting. -->
         <h4 id="week_3">
             Week 3: Extend the Project Website, Complete Project Board Tutorials
