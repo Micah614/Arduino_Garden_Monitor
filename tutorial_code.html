@@ -256,8 +256,11 @@
             The potentiometer is the core electrical component of a turn dial knob, such as one might find in 
             an old car radio. In fact, these turn dials are sometimes called "rotary potentiometers", since they 
             really just linear potentiometers with the physical action mapped to a rotational range of 
-            motion. Because each voltage must be mapped to a discrete digital signal, a calculation must be 
-            included in the driver code to complete the analog-to-digital signal transformation. 
+            motion. Because each voltage must be mapped to a discrete digital signal, a transformation is 
+            included in the driver to break the 5.0V range into 1024 distinct voltage gaps, completing the 
+            analog-to-digital (ADC) transformation. Since each of the three knobs contain 1024 unique states, 
+            each mapping to the intensity of the associated LED (red, green, or blue), the number of distinct 
+            color values is immense (<i>something like 1024<sup>3</sup> unique combinations</i>). 
         </p>
         <p>
             This tutorial section demonstrates the core concepts of ADC by writing a program to read the 
