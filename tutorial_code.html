@@ -258,9 +258,7 @@
             really just linear potentiometers with the physical action mapped to a rotational range of 
             motion. Because each voltage must be mapped to a discrete digital signal, a transformation is 
             included in the driver to break the 5.0V range into 1024 distinct voltage gaps, completing the 
-            analog-to-digital (ADC) transformation. Since each of the three knobs contain 1024 unique states, 
-            each mapping to the intensity of the associated LED (red, green, or blue), the number of distinct 
-            color values is immense (<i>something like 1024<sup>3</sup> unique combinations</i>). 
+            analog-to-digital (ADC) transformation. 
         </p>
         <p>
             This tutorial section demonstrates the core concepts of ADC by writing a program to read the 
@@ -295,13 +293,18 @@
         <p>
             Interestingly, this set of RGB dials can be used to generate precise RGB values (which can be relayed to the terminal) 
             for front-end development tasks that require specific RGB color values. I may very well use this sketch to select the colors 
-            of my upcoming CSS designs. The video above does not do it justice, but this program is capable of generating 
+            of my upcoming CSS designs. The video above does not do it justice, however this program is capable of generating 
             samples of some estimated 1,073,741,824 RGB color shades!
+
+            Since each of the three knobs contain 1024 unique voltage states, with each of these controlling the relative intensity of 
+            its' associated LED (i.e., red, green, or blue), the number of distinct color combinations is tremendous, producing something 
+            like 1024<sup>3</sup> unique combinations. 
             
-            As it turns out, once the sketch has been loaded on the control board, the program will continue 
-            to run with little to no discernable distruption to desktop computing resources. This is because the control board is a separate 
-            computational circuit with its own memory and processing resources. Aside from its' communication with the terminal, the only 
-            resource the control board needs is some form of a local power source. 
+            As a side note, it appears that once a sketch has been loaded on the control board, the program continues to run interrupted 
+            with no discernable support from any desktop computing resources. Recall that this is indeed true, since the control board 
+            provides it's own computational circuit, main memory, and processing resources! This means that aside from streaming data 
+            over the port it is connected to, control board needs only a local source of power. All of this is quite convenient for the 
+            sensors we will try to develop in <a href="./greenhouse_monitor_project.html">part 2</a> of this project.
         </p>
         <h5>
             Project Research
