@@ -106,14 +106,24 @@
             Week 6: Breadboard Wiring, Part Replacements, and Uncovering Microservice Architecture Patterns. 
         </h4>
         <p>
-            Week 6 was spent assembling the Greenhouse monitor breadboard and circuit boards, as well as 
-            ordering an alternative ESP8266 microcontroller to convert the greenhouse monitor unit into a 
+            Week 6 was largely spent assembling the Greenhouse monitor breadboard and ordering an 
+            alternative ESP8266 microcontroller to convert the greenhouse monitor unit into a 
             standalone web server. I also begain exploring microservice architectures with the help of a 
             Udemy course called <cite>"Build, deploy, and scale an E-Commerce app using Microservices built 
-            with Node, React, Docker and Kubernetes"</cite>. This lecture series pointed out several microservice
-            patterns that can be implemented in Node JS and React that might be useful in designing the 
-            REST API. This lecture series contains 54.5 hours of lecture material in total, and I will 
-            most likely refer to it time and again over the course of the project. 
+            with Node, React, Docker and Kubernetes"</cite>. This lecture series has pointed out several 
+            microservice architecture patterns that I may be able to implement using Node JS and React after 
+            the server and meter components have bee tested. 
+
+            My current architectural pattern idea is to write a driver program for the integrated sensor 
+            circuit that will collect data at scheduled intervals (for a specified time interval) and send 
+            this sensor information off to the serial bus, where it will be intercepted by a recieving program 
+            and formatted into an SQLite format and routed to a raw data table, preferably on the server unit 
+            itself (for storage reasons I would prefer that the onboard database be the central point of failure 
+            for the time being). Once the last measurement record is entered into the table, I will use a 
+            trigger to aggregate the most recent data collection and enter this value into another offline database 
+            (i.e., a very simple data warehouse). From here, I can create a program to coordinate scheduled updates, 
+            collecting the aggregated data value from the warehouse table, incorporating it into HTML/XHTML 
+            and serving it to the user from a single-page web application, which I will link to this site. 
         </p>
         <h5>
             Researching, Assembling, and Wiring the Breadboard
