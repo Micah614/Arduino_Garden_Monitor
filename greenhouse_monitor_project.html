@@ -9,55 +9,142 @@
     <title>Arduino Greenhouse Monitor Project</title>
 </head>
 <body>
-    <h1>The Arduino Greenhouse Monitor and REST API Project</h1>
+    <h1>
+        The Arduino Greenhouse Monitor and REST API Project
+    </h1>
     <hr>
-    <h3>Introduction</h3>
-    <p>Welcome to the The Arduino Greenhouse Monitor and REST API Project page! The contents of this page are presented in an index, 
-        organized by week, and presented with a summary of each project section.</p>
+    <h3>
+        Introduction
+    </h3>
+    <p>
+        Welcome to the second half of the Arduino Greenhouse Monitor and REST API Project. The contents of 
+        this project are presented in a jump table for your convenience, summarized by weekly project sections.
+    </p>
     
-    <h3></h3>
+    <h3>
+        Project Jump Table
+    </h3>
     <!--Weekly Timeline Table-->
-    <table style="width:100%">
-        <tr>
-          <th>Weekly Timeline</th>
-          <th>Activity Summary</th>
-        </tr>
-        <tr>
-          <td>Week 6</td>
-          <td>TBD</td>
-        </tr>
-        <tr>
-          <td>Week 7</td>
-          <td>TBD</td>
-        </tr>
-        <tr>
-            <td>Week 8</td>
-            <td>TBD</td>
-        </tr>
-        <tr>
-            <td>Week 9</td>
-            <td>TBD</td>
-        </tr>
-        <tr>
-            <td>Week 10</td>
-            <td>TBD</td>
-        </tr>
-        <tr>
-            <td>Week 11</td>
-            <td>TBD</td>
-        </tr>
-        <tr>
-            <td>Week 12</td>
-            <td>TBD</td>
-        </tr>
-    </table>
-    <!--Navigation Menu-->
+    <div id="jump_table">
+        <table style="width:100%">
+            <tr>
+                <th>
+                    Weekly Timeline
+                </th>
+                <th>
+                    Activity Summary
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    Week 6
+                </td>
+                <td>
+                    <a href="#week_6">Week 6</a> was spent assembling the Greenhouse monitor breadboard and 
+                    circuit boards, as well as ordering an alternative ESP8266 microcontroller to convert the 
+                    greenhouse monitor unit into a standalone web server. I also begain exploring 
+                    microservice architectures with the help of a Udemy course called <cite>"Build, deploy, 
+                    and scale an E-Commerce app using Microservices built with Node, React, Docker and 
+                    Kubernetes"</cite>. This lecture series pointed out several patterns that can be implemented 
+                    using Node JS and React that may be useful when designing the REST API. The lecture series 
+                    contains 54.5 hours of lecture material in total, and I will probably refer to it over the 
+                    course of the project. 
+                </td>
+            </tr>
+                <td>
+                    Week 7
+                </td>
+                <td>
+                    TBD
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Week 8
+                </td>
+                <td>
+                    TBD
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Week 9
+                </td>
+                <td>
+                    TBD
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Week 10
+                </td>
+                <td>
+                    TBD
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Week 11
+                </td>
+                <td>
+                    TBD
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Week 12
+                </td>
+                <td>
+                    TBD
+                </td>
+            </tr>
+        </table>
+    </div>
     <hr>
+    <div id="summaries">
+        <h4 id="week_6">
+            Week 6: Breadboard Wiring, Part Replacements, and Uncovering Microservice Architecture Patterns. 
+        </h4>
+        <p>
+            Week 6 was spent assembling the Greenhouse monitor breadboard and circuit boards, as well as 
+            ordering an alternative ESP8266 microcontroller to convert the greenhouse monitor unit into a 
+            standalone web server. I also begain exploring microservice architectures with the help of a 
+            Udemy course called <cite>"Build, deploy, and scale an E-Commerce app using Microservices built 
+            with Node, React, Docker and Kubernetes"</cite>. This lecture series pointed out several microservice
+            patterns that can be implemented in Node JS and React that might be useful in designing the 
+            REST API. This lecture series contains 54.5 hours of lecture material in total, and I will 
+            most likely refer to it time and again over the course of the project. 
+        </p>
+        <h5>
+            Researching, Assembling, and Wiring the Breadboard
+        </h5>
+        <img src="./Images/Breadboard-Pinout.png">
+        <p>
+            Figure 1.) Basic Arduino Breadboard circuit pinout diagram. The top and bottom power rails (red) 
+            are divided into 3.3V and 5V power supply sections. Ground rails are shown in blue and can be used 
+            by any circuit component requiring a ground. The center (green) pinout locations are reserved for 
+            circuit components, and for our intents and purposes acts as a serial communication hub.
+        </p>
+    </div>
+    <hr>
+    <!--Navigation Menu-->
     <strong><u>Navigation Menu:</u></strong>
     <ul>
-        <li><a href="./index.html"><p><u>Index Page</u></p></a></li>
-        <li><a href="./proposal.html"><u>Project Proposal and Timeline</u></a></li>
-        <li><a href="./tutorial_code.html"><u>Arduino Project Tutorials</u></a></li>
+        <li>
+            <a href="./index.html"><p>
+                <u>Index Page</u>
+            </a>
+        </li>
+        <li>
+            <a href="./proposal.html">
+                <u>Project Proposal and Timeline</u>
+            </a>
+        </li>
+        <li>
+            <a href="./tutorial_code.html">
+                <u>Arduino Project Tutorials</u>
+            </a>
+        </li>
     </ul>
 
 </body>
