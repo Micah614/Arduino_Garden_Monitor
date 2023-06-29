@@ -115,15 +115,15 @@
             the server and meter components have bee tested. 
 
             My current architectural pattern idea is to write a driver program for the integrated sensor 
-            circuit that will collect data at scheduled intervals (for a specified time interval) and send 
-            this sensor information off to the serial bus, where it will be intercepted by a recieving program 
-            and formatted into an SQLite format and routed to a raw data table, preferably on the server unit 
-            itself (for storage reasons I would prefer that the onboard database be the central point of failure 
-            for the time being). Once the last measurement record is entered into the table, I will use a 
-            trigger to aggregate the most recent data collection and enter this value into another offline database 
-            (i.e., a very simple data warehouse). From here, I can create a program to coordinate scheduled updates, 
-            collecting the aggregated data value from the warehouse table, incorporating it into HTML/XHTML 
-            and serving it to the user from a single-page web application, which I will link to this site. 
+            circuit that will collect data at scheduled intervals (and for a specified time interval), 
+            sending this sensor information to the serial bus, where the message will be collected by the 
+            driver program and into a time series of SQLite compatible tuples, which will be routed to a 
+            raw data table, preferably on the server itself, however cloud-based storage is an option as well. 
+            I will then use as SQLite trigger to aggregate the recent data collection and enter this newly 
+            aggregated value into a separate offline database (i.e., a simple warehouse). I can then
+            create a program in React to coordinate sampling of data from the data warehouse, transform it 
+            into XML or JSON, and serve this/these aggregated value(s) on a single-page web application 
+            which I will link to this website. 
         </p>
         <h5>
             Researching, Assembling, and Wiring the Breadboard
