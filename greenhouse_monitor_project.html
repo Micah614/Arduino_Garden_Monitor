@@ -114,16 +114,16 @@
             microservice architecture patterns that I may be able to implement using Node JS and React after 
             the server and meter components have bee tested. 
 
-            My current architectural pattern idea is to write a driver program for the integrated sensor 
-            circuit that will collect data at scheduled intervals (and for a specified time interval), 
-            sending this sensor information to the serial bus, where the message will be collected by the 
-            driver program and into a time series of SQLite compatible tuples, which will be routed to a 
-            raw data table, preferably on the server itself, however cloud-based storage is an option as well. 
-            I will then use as SQLite trigger to aggregate the recent data collection and enter this newly 
-            aggregated value into a separate offline database (i.e., a simple warehouse). I can then
-            create a program in React to coordinate sampling of data from the data warehouse, transform the 
-            data into XML or JSON, and serve this/these aggregated value(s) on a single-page web API that can
-            be linked with or embedded into this website. 
+            My current architectural design idea is to write a driver program for the integrated sensor 
+            circuit that will collect data at scheduled intervals (and for a specified time interval) 
+            and send this sensor information over to the serial bus, where the messages will be collected and 
+            transformed by the driver program into a sequence of time-series SQLite data tuples, routed into 
+            a "raw" data table. (Note: preferably this database will be located on the server itself, however 
+            cloud-based storage is another option that I will investigate). I can then develop an SQLite trigger 
+            to aggregate raw data and enter it into a separate offline database (i.e., a data warehouse), where 
+            a React single-page web application can collect and serve the data to users in the form of XHTML
+            and/or JSON. The resulting single-page web API that can be linked with or embedded into this 
+            website for demonstration purposes. 
         </p>
         <h5>
             Researching, Assembling, and Wiring the Breadboard
