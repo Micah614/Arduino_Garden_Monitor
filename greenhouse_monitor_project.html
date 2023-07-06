@@ -101,27 +101,19 @@
             Week 6: Breadboard Wiring, Part Replacements, and Discovering Microservice Architecture Patterns. 
         </h4>
         <p>
-            Week 6 was mainly spent assembling the Greenhouse monitor breadboard and ordering an 
-            alternative ESP8266 microcontroller to convert the greenhouse monitor into a web server with its' 
-            own IP address. I also begain exploring microservice architectures with the help of a Udemy course 
-            called <cite>"Build, deploy, and scale an E-Commerce app using Microservices built with Node, React, 
-            Docker and Kubernetes"</cite>. This lecture series has pointed out key differences between microservice 
-            and monolithic software patterns, and I try my best to develop the API according to these patterns, with 
-            the hope of extending the application using Node JS, React, or a different framework at a later time.
+            Week 6 was mainly spent assembling the Greenhouse monitor breadboard circuit and investigating architecture 
+            patters to use with my ESP8266 transceiver module. I begain exploring microservice architectures with 
+            the help of a Udemy course: <cite>"Build, deploy, and scale an E-Commerce app using Microservices built 
+            with Node, React, Docker and Kubernetes"</cite>. This lecture series pointed out key differences between 
+            microservice and monolithic architecture, and my aim is to develop the API accordance with these microservice 
+            patterns, in the hope of extending this application in the future using Node JS, React, or a different framework.
 
-            My current architectural design idea is to write a driver program to "harvest" sensor 
-            data at regular intervals and present it on a serial bus where the messages can be read by the 
-            the recieving portion of the same driver firmware and diverted to a SQL transaction database,
-            transforming the real-time sensor data into an aggregate measurement, and asynchronously populate 
-            an OLAP data warehouse file (all located on same serial bus) and used this aggregated offline data 
-            to satisfy server GET/POST requests.
-            
-            I believe I can present this summarized data using a single-page web application (REACT?) and embedd the information
-
-
-            that I can program to collect and serve to users in the form of XHTML or JSON, whenever an update 
-            is detected in the offline database. The resulting single-page web API that can then very easily 
-            be linked or embedded into this website for final demonstration purposes. 
+            My current architectural design idea is to write a driver program that will "harvest" sensor 
+            data at regular intervals and present this raw data to the serial bus where the messages can be read by the the 
+            recieving portion of the driver firmware and inserted as a well-constructed tuple into a SQL transaction database,
+            then transform this raw sensor data into an aggregate measurement and populate an OLAP style data warehouse file 
+            via a trigger in order to satisfy the server GET and/or POST requests. I am hoping that further research into REST 
+            API architecture involving arduino sensors will offer further clarity. 
         </p>
 
         <h5>
