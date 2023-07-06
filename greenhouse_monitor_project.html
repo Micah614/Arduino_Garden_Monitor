@@ -112,25 +112,23 @@
         </h4>
         <p>
             Week 6 was mainly spent assembling the Greenhouse monitor breadboard and ordering an 
-            alternative ESP8266 microcontroller to convert the greenhouse monitor unit into a 
-            standalone web server. I also begain exploring microservice architectures with the help of a 
-            Udemy course called <cite>"Build, deploy, and scale an E-Commerce app using Microservices built 
-            with Node, React, Docker and Kubernetes"</cite>. This lecture series has pointed out several 
-            key microservice patterns that I think I can implement using Node JS and React after all of the 
-            WiFi transciever based server unit his been assembled and tested. 
+            alternative ESP8266 microcontroller to convert the greenhouse monitor into a web server with its' 
+            own IP address. I also begain exploring microservice architectures with the help of a Udemy course 
+            called <cite>"Build, deploy, and scale an E-Commerce app using Microservices built with Node, React, 
+            Docker and Kubernetes"</cite>. This lecture series has pointed out key differences between microservice 
+            and monolithic software patterns, and I try my best to develop the API according to these patterns, with 
+            the hope of extending the application using Node JS, React, or a different framework at a later time.
 
-            My current architectural design pattern idea is to write a driver that will "harvest" the sensor 
-            data at regular intervals and present it to the serial bus where the messages can be read by the 
-            the recieving portion of the driver firmware, that can collect and transform this data into 
-            schema-defined tuples and route them to a "raw_data" SQLite database table. (preferably 
-            this database will be located on the server itself, however cloud-based data storage is another 
-            option if available memory does ever become an issue). 
+            My current architectural design idea is to write a driver program to "harvest" sensor 
+            data at regular intervals and present it on a serial bus where the messages can be read by the 
+            the recieving portion of the same driver firmware and diverted to a SQL transaction database,
+            transforming the real-time sensor data into an aggregate measurement, and asynchronously populate 
+            an OLAP data warehouse file (all located on same serial bus) and used this aggregated offline data 
+            to satisfy server GET/POST requests.
             
-            Once the raw data table has been formed, I can write an SQLite trigger that will aggregate the 
-            raw data and submit it to a separate offline database (i.e., a data warehouse) whenever a new 
-            group of entries is placed into the raw data table.
-            
-            I believe I can then present this summary data using a React single-page web application form 
+            I believe I can present this summarized data using a single-page web application (REACT?) and embedd the information
+
+
             that I can program to collect and serve to users in the form of XHTML or JSON, whenever an update 
             is detected in the offline database. The resulting single-page web API that can then very easily 
             be linked or embedded into this website for final demonstration purposes. 
