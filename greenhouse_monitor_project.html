@@ -196,11 +196,11 @@
                 }
         
                 avgValue=0;
-                for(int i=2;i<8;i++){  # sampling the middle six data points in the sorted buffer reduces the effect of outliers on the measurement.
+                for(int i=2;i<8;i++){  // sampling the middle 6 points of the sorted buffer reduces the effect of outliers.
                     avgValue+=buf[i];
                 }
         
-                int NUM_BINS = 6;  // number of readings in measurement
+                int NUM_BINS = 6;  // number of samples in the next average calculation.
                 int avg_reading = float(avgValue)/NUM_BINS;
                 float average_voltage = avg_reading*(5.0/1024);  // discretize the phVoltage reading over a range of 5 volts.
             
