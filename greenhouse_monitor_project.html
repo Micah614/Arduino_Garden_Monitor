@@ -238,8 +238,8 @@
         
         <p>TDS driver functions shown below, were adapted from 
             <cite>
-                <a href="//www.cqrobot.wiki/index.php/TDS_(Total_Dissolved_Solids)_Meter_Sensor_SKU:_CQRSENTDS01">
-                    cqrobot.wiki's <i>"TDS (Total Dissolved Solids) Meter Sensor SKU: CQRSENTDS01"</i>
+                <a href="https://randomnerdtutorials.com/arduino-tds-water-quality-sensor/" target="blank">
+                    Arduino with TDS Sensor (Water Quality Sensor)
                 </a>
             </cite>
         </p>
@@ -248,7 +248,7 @@
                 /* Thermocouple libraries, hardware, and driver variables.*/
                 #include OneWire.h
                 #include DallasTemperature.h
-                const int SENSOR_PIN = 13; // Arduino pin connected to DS18B20 sensor's DQ pin
+                const int SENSOR_PIN = 13; // Arduino pin connected to DS18B20 (temperature) sensor's DQ pin
                 OneWire oneWire(SENSOR_PIN);         // create a oneWire instance
                 DallasTemperature tempSensor(&oneWire); // pass oneWire to DallasTemperature library
                 float tempCelsius;    // temperature in Celsius
