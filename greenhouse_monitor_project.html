@@ -245,156 +245,156 @@
         </p>
         <pre>
             <code>
-                /* Thermocouple libraries, hardware, and driver variables.*/
-                #include OneWire.h
-                #include DallasTemperature.h
-                const int SENSOR_PIN = 13; // Arduino pin connected to DS18B20 (temperature) sensor's DQ pin
-                OneWire oneWire(SENSOR_PIN);         // create a oneWire instance
-                DallasTemperature tempSensor(&oneWire); // pass oneWire to DallasTemperature library
-                float tempCelsius;    // temperature in Celsius
-                float tempFahrenheit; // temperature in Fahrenheit
-        
-                /* pH sensor libraries, hardware, and driver variables.*/
-                float average_voltage, slope, intercept, pH;
-                int buf[10],temp,NUM_BINS,avg_reading;
-                unsigned long int avgValue;  // declare the aggregator variable used to sample the pH.
-                const int analogInPin = A0;  // pH analog-in.
-        
-                /* TDS sensor libraries, hardware, and driver variables.*/
-                #define TdsSensorPin A1
-                #define VREF 5.0              // analog reference voltage(Volt) of the ADC
-                #define SCOUNT  30            // sum of sample point
-        
-                int analogBuffer[SCOUNT];     // store the analog value in the array, read from ADC
-                int analogBufferTemp[SCOUNT];
-                int analogBufferIndex = 0;
-                int copyIndex = 0;
-        
-                float averageVoltage = 0;
-                float tdsValue = 0;
-                float temperature = 16;       // current temperature for compensation
-        
-                // median filtering algorithm
-                int getMedianNum(int bArray[], int iFilterLen){
-                int bTab[iFilterLen];
-                for (byte i = 0; i<iFilterLen; i++) {
-                    b Tab[i] = bArray[i];
-                    int i, j, bTemp;
-                    for (j = 0; j < iFilterLen - 1; j++) {
-                        for (i = 0; i < iFilterLen - j - 1; i++) {
-                            if (bTab[i] > bTab[i + 1]) {
-                                bTemp = bTab[i];
-                                bTab[i] = bTab[i + 1];
-                                bTab[i + 1] = bTemp;
-                            }
-                        }
+        /* Thermocouple libraries, hardware, and driver variables.*/
+        #include OneWire.h
+        #include DallasTemperature.h
+        const int SENSOR_PIN = 13; // Arduino pin connected to DS18B20 (temperature) sensor's DQ pin
+        OneWire oneWire(SENSOR_PIN);         // create a oneWire instance
+        DallasTemperature tempSensor(&oneWire); // pass oneWire to DallasTemperature library
+        float tempCelsius;    // temperature in Celsius
+        float tempFahrenheit; // temperature in Fahrenheit
+
+        /* pH sensor libraries, hardware, and driver variables.*/
+        float average_voltage, slope, intercept, pH;
+        int buf[10],temp,NUM_BINS,avg_reading;
+        unsigned long int avgValue;  // declare the aggregator variable used to sample the pH.
+        const int analogInPin = A0;  // pH analog-in.
+
+        /* TDS sensor libraries, hardware, and driver variables.*/
+        #define TdsSensorPin A1
+        #define VREF 5.0              // analog reference voltage(Volt) of the ADC
+        #define SCOUNT  30            // sum of sample point
+
+        int analogBuffer[SCOUNT];     // store the analog value in the array, read from ADC
+        int analogBufferTemp[SCOUNT];
+        int analogBufferIndex = 0;
+        int copyIndex = 0;
+
+        float averageVoltage = 0;
+        float tdsValue = 0;
+        float temperature = 16;       // current temperature for compensation
+
+        // median filtering algorithm
+        int getMedianNum(int bArray[], int iFilterLen){
+        int bTab[iFilterLen];
+        for (byte i = 0; i<iFilterLen; i++) {
+            b Tab[i] = bArray[i];
+            int i, j, bTemp;
+            for (j = 0; j < iFilterLen - 1; j++) {
+                for (i = 0; i < iFilterLen - j - 1; i++) {
+                    if (bTab[i] > bTab[i + 1]) {
+                        bTemp = bTab[i];
+                        bTab[i] = bTab[i + 1];
+                        bTab[i + 1] = bTemp;
                     }
-                    if ((iFilterLen & 1) > 0){
-                        bTemp = bTab[(iFilterLen - 1) / 2];
-                    }
-                    else {
-                        bTemp = (bTab[iFilterLen / 2] + bTab[iFilterLen / 2 - 1]) / 2;
-                    }
-                    return bTemp;
                 }
-        
-                void setup() {
-                    Serial.begin(9600);  // initialize Baud rate at 115200 (min. rate limit imposed by TDS sensor)
-                    tempSensor.begin();    // DallasTemperature class function
-                    pinMode(TdsSensorPin,INPUT);
+            }
+            if ((iFilterLen & 1) > 0){
+                bTemp = bTab[(iFilterLen - 1) / 2];
+            }
+            else {
+                bTemp = (bTab[iFilterLen / 2] + bTab[iFilterLen / 2 - 1]) / 2;
+            }
+            return bTemp;
+        }
+
+        void setup() {
+            Serial.begin(9600);  // initialize Baud rate at 115200 (min. rate limit imposed by TDS sensor)
+            tempSensor.begin();    // DallasTemperature class function
+            pinMode(TdsSensorPin,INPUT);
+        }
+
+        // driver main loop.
+        void loop() {
+
+            static unsigned long analogSampleTimepoint = millis();
+            if(millis()-analogSampleTimepoint > 40U){     //every 40 milliseconds,read the analog value from the ADC
+                analogSampleTimepoint = millis();
+                analogBuffer[analogBufferIndex] = analogRead(TdsSensorPin);    //read the analog value and store into the buffer
+                analogBufferIndex++;
+                if(analogBufferIndex == SCOUNT){ 
+                    analogBufferIndex = 0;
                 }
+            }   
+    
+            static unsigned long printTimepoint = millis();
+            if(millis()-printTimepoint > 800U){
+                printTimepoint = millis();
+                for(copyIndex=0; copyIndex<SCOUNT; copyIndex++){
+                    analogBufferTemp[copyIndex] = analogBuffer[copyIndex];
         
-                // driver main loop.
-                void loop() {
+                    // read the analog value more stable by the median filtering algorithm, and convert to voltage value
+                    averageVoltage = getMedianNum(analogBufferTemp,SCOUNT) * (float)VREF / 1024.0;
         
-                    static unsigned long analogSampleTimepoint = millis();
-                    if(millis()-analogSampleTimepoint > 40U){     //every 40 milliseconds,read the analog value from the ADC
-                        analogSampleTimepoint = millis();
-                        analogBuffer[analogBufferIndex] = analogRead(TdsSensorPin);    //read the analog value and store into the buffer
-                        analogBufferIndex++;
-                        if(analogBufferIndex == SCOUNT){ 
-                            analogBufferIndex = 0;
-                        }
-                    }   
-            
-                    static unsigned long printTimepoint = millis();
-                    if(millis()-printTimepoint > 800U){
-                        printTimepoint = millis();
-                        for(copyIndex=0; copyIndex<SCOUNT; copyIndex++){
-                            analogBufferTemp[copyIndex] = analogBuffer[copyIndex];
-                
-                            // read the analog value more stable by the median filtering algorithm, and convert to voltage value
-                            averageVoltage = getMedianNum(analogBufferTemp,SCOUNT) * (float)VREF / 1024.0;
-                
-                            //temperature compensation formula: fFinalResult(25^C) = fFinalResult(current)/(1.0+0.02*(fTP-25.0)); 
-                            float compensationCoefficient = 1.0+0.02*(temperature-25.0);
-                            //temperature compensation
-                            float compensationVoltage=averageVoltage/compensationCoefficient;
-                
-                            //convert voltage value to tds value
-                            tdsValue=(133.42*compensationVoltage*compensationVoltage*compensationVoltage - 255.86*compensationVoltage*compensationVoltage + 857.39*compensationVoltage)*0.5;
-                        }
-                    }
+                    //temperature compensation formula: fFinalResult(25^C) = fFinalResult(current)/(1.0+0.02*(fTP-25.0)); 
+                    float compensationCoefficient = 1.0+0.02*(temperature-25.0);
+                    //temperature compensation
+                    float compensationVoltage=averageVoltage/compensationCoefficient;
         
-                    // temperature 
-                    tempSensor.requestTemperatures();             // send the command to get temperatures
-                    tempCelsius = tempSensor.getTempCByIndex(0);  // read temperature in Celsius
-                    tempFahrenheit = tempCelsius * 9 / 5 + 32; // convert Celsius to Fahrenheit
-        
-                    // pH
-                    for(int i=0;i<10;i++){
-                        buf[i]=analogRead(analogInPin);  // read the analog value from analog-in pin "A0", place the value in the buffer.
-                        delay(30);  // delay the next read for 30 ms.
-                    }
-                    for(int i=0;i<9;i++){
-                        for(int j=i+1;j<10;j++){
-                            if(buf[i]>buf[j]){  // this if statement manages the buffer in sorted order (usefule in e.g., monotonic and antimonotonic pattern recognition)
-                                temp=buf[i];  
-                                buf[i]=buf[j];  
-                                buf[j]=temp;  
-                            }
-                        }
-                    }
-            
-                    avgValue=0;
-                    for(int i=2;i<8;i++){
-                        avgValue+=buf[i];
-                    }
-            
-                    int NUM_BINS = 6;  // number of readings in measurement
-                    int avg_reading = float(avgValue)/NUM_BINS;
-                    float average_voltage = avg_reading*(5.0/1024);  // discretize the phVoltage reading
-            
-                    float slope = -5.7;  // slope of the calibration curve. represents the linear correlation between voltage and response. (Slope value given in the example code: -5.70)
-                    float intercept = 29.46; // intercept. adjust to calibrate.
-                    float pH = ( average_voltage * slope ) + intercept;  // 
-        
-                    Serial.print("Current pH: ");
-                    Serial.println(pH);
-           
-                    // print TDS, alternate message displays during start-up.
-                    // Serial.print("voltage:");
-                    // Serial.print(averageVoltage,2);
-                    // Serial.print("V   ");
-                    if (averageVoltage == 0) {  // tds takes a few seconds to stabilize. Alert the user about probe condition.
-                        Serial.print("Acquiring TDS measurement... \n");  // will read "0ppm" until the TDS meter stabilizes
-                    }
-                    else {
-                        Serial.print("Current TDS:");
-                        Serial.print(tdsValue,0);  // will read "0ppm" until the TDS meter stabilizes
-                        Serial.println("ppm");
-                    }
-            
-                    // print Temperature (C + F)
-                    Serial.print("Ambient Temperature: ");
-                    Serial.print(tempCelsius);    // print the temperature in Celsius
-                    Serial.print("°C");
-                    Serial.print("  ~  ");        // separator between Celsius and Fahrenheit
-                    Serial.print(tempFahrenheit); // print the temperature in Fahrenheit
-                    Serial.println("°F");
-        
-                    delay(1000);  // delay for the combined system
+                    //convert voltage value to tds value
+                    tdsValue=(133.42*compensationVoltage*compensationVoltage*compensationVoltage - 255.86*compensationVoltage*compensationVoltage + 857.39*compensationVoltage)*0.5;
                 }
+            }
+
+            // temperature 
+            tempSensor.requestTemperatures();             // send the command to get temperatures
+            tempCelsius = tempSensor.getTempCByIndex(0);  // read temperature in Celsius
+            tempFahrenheit = tempCelsius * 9 / 5 + 32; // convert Celsius to Fahrenheit
+
+            // pH
+            for(int i=0;i<10;i++){
+                buf[i]=analogRead(analogInPin);  // read the analog value from analog-in pin "A0", place the value in the buffer.
+                delay(30);  // delay the next read for 30 ms.
+            }
+            for(int i=0;i<9;i++){
+                for(int j=i+1;j<10;j++){
+                    if(buf[i]>buf[j]){  // this if statement manages the buffer in sorted order (usefule in e.g., monotonic and antimonotonic pattern recognition)
+                        temp=buf[i];  
+                        buf[i]=buf[j];  
+                        buf[j]=temp;  
+                    }
+                }
+            }
+    
+            avgValue=0;
+            for(int i=2;i<8;i++){
+                avgValue+=buf[i];
+            }
+    
+            int NUM_BINS = 6;  // number of readings in measurement
+            int avg_reading = float(avgValue)/NUM_BINS;
+            float average_voltage = avg_reading*(5.0/1024);  // discretize the phVoltage reading
+    
+            float slope = -5.7;  // slope of the calibration curve. represents the linear correlation between voltage and response. (Slope value given in the example code: -5.70)
+            float intercept = 29.46; // intercept. adjust to calibrate.
+            float pH = ( average_voltage * slope ) + intercept;  // 
+
+            Serial.print("Current pH: ");
+            Serial.println(pH);
+    
+            // print TDS, alternate message displays during start-up.
+            // Serial.print("voltage:");
+            // Serial.print(averageVoltage,2);
+            // Serial.print("V   ");
+            if (averageVoltage == 0) {  // tds takes a few seconds to stabilize. Alert the user about probe condition.
+                Serial.print("Acquiring TDS measurement... \n");  // will read "0ppm" until the TDS meter stabilizes
+            }
+            else {
+                Serial.print("Current TDS:");
+                Serial.print(tdsValue,0);  // will read "0ppm" until the TDS meter stabilizes
+                Serial.println("ppm");
+            }
+    
+            // print Temperature (C + F)
+            Serial.print("Ambient Temperature: ");
+            Serial.print(tempCelsius);    // print the temperature in Celsius
+            Serial.print("°C");
+            Serial.print("  ~  ");        // separator between Celsius and Fahrenheit
+            Serial.print(tempFahrenheit); // print the temperature in Fahrenheit
+            Serial.println("°F");
+
+            delay(1000);  // delay for the combined system
+        }
             </code>
         </pre>
 
