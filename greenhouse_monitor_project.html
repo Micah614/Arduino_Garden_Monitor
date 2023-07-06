@@ -159,7 +159,7 @@
         <img src="./Images/pH_meter_thermometer.jpg">
 
         <p>
-            One of the most exciting moments this week was getting the drivers for the pH meter and thermocouple up and running. Since 
+            Figure 2.) One of the most exciting moments this week was getting the drivers for the pH meter and thermocouple up and running. Since 
             I don't have any real calibrating solutions on hand at the moment, I decided to calibrate the pH probe using milk and 
             vinegar. As awful as that sounds, the attempt went well and I managed to produce some surprisingly accurate values when 
             I tested it with an off-curve calibration standard (pH=6.86).
@@ -232,8 +232,17 @@
             additional start-up time owing to the increased buffer time needed to collect TDS sensor measurements.
         </p>
         <img src="./Images/week7_update.jpg">
+        <p>Figure 3.) Circuit connections for the pH/temperature/TDS serial monitor device.</p>
 
         <h5>Temperature, pH, and TDS Driver Sketch (Serial Output)</h5>
+        
+        <p>TDS driver functions shown below, were adapted from 
+            <cite>
+                <a href="//www.cqrobot.wiki/index.php/TDS_(Total_Dissolved_Solids)_Meter_Sensor_SKU:_CQRSENTDS01">
+                    cqrobot.wiki's <i>"TDS (Total Dissolved Solids) Meter Sensor SKU: CQRSENTDS01"</i>
+                </a>
+            </cite>
+        </p>
         <pre>
             /* Thermocouple libraries, hardware, and driver variables.*/
             #include <OneWire.h>
