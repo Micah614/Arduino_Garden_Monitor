@@ -187,7 +187,7 @@
                 }
                 for(int i=0;i<9;i++){
                     for(int j=i+1;j<10;j++){
-                        if(buf[i]>buf[j]){  // this if statement manages the buffer in sorted order (usefule in e.g., monotonic and antimonotonic pattern recognition)
+                        if(buf[i]>buf[j]){  // This nested for-loop maintains buffer in ascending sorted order.
                             temp=buf[i];  
                             buf[i]=buf[j];  
                             buf[j]=temp;  
@@ -196,7 +196,7 @@
                 }
         
                 avgValue=0;
-                for(int i=2;i<8;i++){  # note the range of 6 here while an N="6" aggregated measurement is collected.
+                for(int i=2;i<8;i++){  # sampling the middle six data points in the sorted buffer reduces the effect of outliers on the measurement.
                     avgValue+=buf[i];
                 }
         
