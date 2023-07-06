@@ -152,7 +152,7 @@
             Assembling, Calibrating, and Testing the pH Meter Function
         </h5>
         <p>
-            I tracked down the following tutorial mentioning some of the parts I have on hand: 
+            First, I tracked down the following tutorial mentioning some of the parts I have on hand: 
             <cite><a href="https://www.electroniclinic.com/ph-meter-arduino-ph-meter-calibration-diymore-ph-sensor-arduino-code/" target="blank">
             "pH meter Arduino, pH Meter Calibration, DIYMORE pH Sensor Arduino Code"</a></cite>. I decided 
             to wire the positive and terminal leads to the breadboard in preparation for the serial hub 
@@ -160,10 +160,13 @@
             <a href="https://cdn.awsli.com.br/969/969921/arquivos/ph-sensor-ph-4502c.pdf" target="blank">pH probe</a>.
         </p>
         <p>
-            After I placed the connections and verified a response from the pH sensor, I lined out a calibration curve 
-            using vinegar and milk as stand-in calibration solutions (real calibration solutions are on the way). The 
-            result is a remarkably stable and robust pH meter, which I have been using to monitor and adjust the solutions 
-            in both hydroponic systems. The program currently sends updates to a serial monitor on my laptop at a rate of 2 Hz. 
+            Once I placed the connections and verified a response from the pH sensor, I lined out a calibration curve 
+            using vinegar and milk as my stand-in calibration solutions (real calibration solutions are on the way) and applied
+            a short circuit connection to the pH probe terminal to register a neutral (i.e., pH = 7) response from the pH 
+            probe. The result is a remarkably stable and robust pH meter, and I have been using it to monitor and adjust the pH of 
+            the nutrient solutions in both hydroponic systems. The program I currently have relays updates to the IDE serial monitor 
+            at a rate of around 2 Hz (2 updates/second). I also have a working driver sketch for the temperature probe, and I plan on 
+            combined these two programs, along with others in the final version of the driver sketch program.
         </p>
 
         <h5>
