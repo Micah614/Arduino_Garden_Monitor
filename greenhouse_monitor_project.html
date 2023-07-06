@@ -185,7 +185,7 @@
         <div class="box">
             <pre>
                 // Hardware
-                const int analogInPin = A0;  // an analog recieving pin
+                const int analogInPin = A0;  // Identity of the analog recieving pin
         
                 // Variables
                 float average_voltage, slope, intercept, pH;
@@ -214,7 +214,7 @@
                 }
         
                 avgValue=0;
-                for(int i=2;i<8;i++){
+                for(int i=2;i<8;i++){  # note the range of 6 here while an N="6" aggregated measurement is collected.
                     avgValue+=buf[i];
                 }
         
