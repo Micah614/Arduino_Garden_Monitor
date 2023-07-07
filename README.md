@@ -20,6 +20,6 @@ Risks to Project Completion: This project requires Arduino hardware, as well as 
 
 Mitigation Strategies: In addition to the sensors, wires, and board components that I will need to create the weather monitor, I have also purchased an Arduino &#34;Project Board&#34; that comes with a highly-recommended tutorial. There are many YouTube videos and blog articles about creating a pH meter using Arduino parts, and I have also found a tutorial about installing the Arduino Bluetooth and ESP-8266 WiFi transceivers. 
 
-Project Assessments: The end goal will be to display real-time measurements from the extended transceiver onto a REST API endpoint that I can connect with other microservices at a later date.
+Project Assessments: The end goal of this project will be to display the real-time system measurements collected by the extended transceiver device within a REST API microservice that I can combine with other services at a later time.
 
 Project Link: https://micah614.github.io/arduino-indoor-weatherstation/
