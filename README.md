@@ -6,7 +6,7 @@
 
 Title: Arduino Indoor Weather Station 
 
-The aim of this project will be to create a system to monitor my 4X4 grow tent garden, which currently contains four potted plants and two hydroponic systems, whenever my wife and I are away on vacation. 
+The aim of this project will be to create a system to monitor my 4X4 grow tent garden, which currently contains four potted plants and two 16-plqnt hydroponic systems, whenever my wife and I are away on vacation. 
 
 The goal will be to integrate several arduino sensors (i.e., those for temperature, pH, and total dissolved solids, etc.) on a common serial bus and a single-board computer driver. After the sensors are installed, integrated, and beta-testedand, I will investigate methods to collect, aggregate, and stream this data using a REST API architecture and bluetooth and/or wifi enabling transceiver modukes. In just such a way, this project will investigate concepts relevant to the internet of things (IOT), with a focus on real-time data collection, routing, persistence, aggregation, and browser presentation. Various server and server-less architecture patterns will be explored, and the REST API endpoint will be presented on this website.
 
