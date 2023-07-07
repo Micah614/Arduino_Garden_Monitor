@@ -1,4 +1,4 @@
-# arduino-indoor-weatherstation
+KO# arduino-indoor-weatherstation
 
 <h2>Micah Simmerman</h2>
 
@@ -14,7 +14,7 @@ Vision Statement: My goals for this project are: 1.) Learn the basics of Arduino
 
 Motivation: My motivation for completing this project is to begin a long-term research project to develop my hobbies and interests, while deepening my understanding of a fascinating topic of research. My hope is that by orienting a portfolio around my personal interests, I will be likely to continue adding to the project and developing this portfolio in the future.
 
-Project Goals: 1.) Assemble an Arduino device to monitor pH, TDS, temperature, humidity, etc. of a 4x4 indoor garden growtent. 2.) Install IOT network modules and access output of the device via local area network (LAN) and/or WAN connections. 3.) Develop a simple REST API webpage application (REACT seems a likely candidate) to present the livestream data in a briwser and render measurements in (e.g.) an XHTML table. 4.) Enjoy the benefits of having a WAN-connected serial relay monitor the health of my plants for me. 
+Project Goals: 1.) Assemble an Arduino device to monitor pH, TDS, temperature, humidity, etc. of the 4x4 indoor garden growtent. 2.) Install IOT network modules and access output of the device via local area network (LAN) and/or WAN connections. 3.) Develop a simple REST API webpage application (REACT seems a likely candidate) to present the livestream data in a briwser and render measurements in (e.g.) an XHTML table. 4.) Enjoy the benefits of having a WAN-connected serial relay monitor the health of my plants for me. 
 
 Risks to Project Completion: This project requires Arduino hardware, as well as a moderate background in analytical sensors and network relay devices. I have very limited experience with electrical wiring (although I did take Physics), and I am completely unfamiliar with the Arduino native development language as of the start of this project.
 
