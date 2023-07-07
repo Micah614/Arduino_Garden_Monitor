@@ -377,7 +377,7 @@
             // Serial.print(averageVoltage,2);
             // Serial.print("V   ");
             if (averageVoltage == 0) {  // tds takes a few seconds to stabilize. Alert the user about probe condition.
-                Serial.print("Acquiring TDS measurement... \n");  // will read "0ppm" until the TDS meter stabilizes
+                Serial.print("Acquiring TDS measurement... \n");  // this message is displayed until a response is generated from the TDS sensor.
             }
             else {
                 Serial.print("Current TDS:");
