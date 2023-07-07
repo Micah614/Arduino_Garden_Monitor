@@ -5,9 +5,14 @@ Remote Garden Monitor: Exploring IOT Networks and Arduino Single-Board Computers
 GitHub Portfolio: https://github.com/Micah614/arduino-indoor-weatherstation/<br>
 
 Introduction<br>
-Smart devices have become increasingly common in US households. Connected device commerce is expected to expand to a $581.85 billion industry by 2032 according to a recent report by precedenceresearch.com. Network connected devices are currently found in cars, homes, tablets, watches, cell phones, surveillance systems, strap-on monitors, virtual reality equipment, and much more. The increasing number of network-connected devices in the last decade has driven researchers to adopt the term “internet of things”, also known as “IOT”. This project will explore the fundamental characteristics of IOT devices by developing a Bluetooth and Wi-Fi connected greenhouse monitoring station using Arduino single-board computer parts, extended C/C++, Python, HTML, CSS, and JavaScript. 
+Smart devices have become increasingly common in US and international households and IOT device commerce is expected to expand to a whopping $581.85 billion industry by 2032, according to a recent report conducted by precedenceresearch.com. 
+
+Wide Area Network (WAN) connected devices are currently found in cars, homes, tablets, watches, cell phones, surveillance systems, virtual reality equipment,and numerous alternative applications. This recent surge in the use and availability of WAN connected devices in the last decade has driven researchers to adopt the term “internet of things”, otherwise known as “IOT".
+
+This project will explore the fundamental characteristics of IOT devices by developing a Bluetooth and/or Wi-Fi enabled greenhouse "weather" monitor station, using Arduino single-board computer parts,and a REST API architecture. The second and ongoing section of this project is the development of this documenational blog. According to the guidelines of the CSBP-3112 course syllabus, this project will involve a weekly commitment of around 3-4 hours.
+
 <br><br>
-The first half of this project will involve completing a tutorial about Arduino hardware and the integrated development environment (IDE), which I will complete with the help of Freenove® project board kit that came with the tutorial.
+In the first section of this project, I will complete a series of Arduino tutorials and blog about the characteristics of Arduino hardware,  and the integrated development environment (IDE), which I will complete with the help of Freenove® project board kit that came with the tutorial.
 
 <br><br><br>
 Figure 1.) The project board I will be using to learn about driver development, prototyping, and the Arduino IDE software in weeks 2-5 of the semester.<br><br>
