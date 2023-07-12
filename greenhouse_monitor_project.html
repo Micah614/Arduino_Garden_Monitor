@@ -428,20 +428,23 @@
         <p>            
             Given this observation it appears reasonable to assume that maintaining the pH and TDS probes on seperate Baud frequencies could 
             offset the effect of this interference. After testing this hypothesis, I concluded that the pH and TDS meter can share no more than two of the 
-            following three testing conditions with each other: {baud_rate, test_solution, time_period}. Since I have two separate hydroponic systems treated 
-            under the same conditions, I have decided to solve this issue (temporarily) by placing the TDS sensor in the other container. This should still 
-            provide a relatively precise estimate of the TDS levels in each system (barring a leak), while allowing me to complete other parts of this project 
-            and allowing me to revisit the issue of time-scale decoupling of these sensors sometime in the future. Running the sensors on different baud rates 
+            following three testing conditions with each other: {baud_rate, test_solution, time_period}. Running the sensors on different baud rates 
             is not an option, because the serial monitor can maintain only one Baud rate frequency at a time. Making time-scale decoupling the only option for 
-            creating a stand-alone measurement system. 
+            creating a stand-alone measurement system with all three sensors. 
+
+
         </p>
         <p>
-            Presently, it seems reasonable to assume that the TDS and pH probes may share at most two of the following three test conditions 
-            when sampling: {baud_rate, test_solution, time_period}
+            Since I maintain both of my hydroponic systems identically, the measurements these systems produce may be considered equivalent within a negligible margin 
+            of error (i.e., less than 10%). Given this fact, I have decided to temporarily resolve this system timing issue by placing the TDS sensor in the other 
+            system reservior, which should provide a reasonable "best of both worlds" solution at the cost of staking the accuracy of these measurements on the precision 
+            of my solution preps.
+        </p>    
+        <p>
+            This should provide a relatively precise estimate of the pH and TDS of each hydroponic system, while allowing the pH and TDS sensors to remain online and 
+            operate simultaneously. I plan to revisit the issue of time-scale decoupling after the online API database has been completed. 
         </p>
     <br>
-
-
         <h5 id="week_8">
             Week 8: Building Full-Stack Web Applications Using Node.js, REACT, and Firebase (by Google)
         </h5>
