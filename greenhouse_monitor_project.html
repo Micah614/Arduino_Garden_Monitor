@@ -522,7 +522,8 @@
         </p>
 
         <img src="./Images/ESP8266_Realtime_DB.png">
-        <p>Figure 7.) The most recent objective of the Greenhouse Monitor REST API project involves establishing a database connection with the ESP-8266 (12E) Wifi 
+        <p>
+            Figure 7.) The most recent objective of the Greenhouse Monitor REST API project involves establishing a database connection with the ESP-8266 (12E) Wifi 
             tranceiver to push data to a cloud based API resource that can be read by (e.g.) REACT Hooks at a later stage of the project. Completing this stage of the 
             project will involve establishing a TX/RX-based serial connection between the Arduino Uno and the ESP-8266 Wifi device.  
         </p>
@@ -532,7 +533,7 @@
         </h5>
         <p>
             <i>
-                The tutorials that I lined out last week were helpful, but not in the way I thought they would be.
+                The tutorials that I lined out last week turned out to be helpful, just not in the way I thought they would be.
             </i>
         </p>
         <p>
@@ -549,6 +550,12 @@
             I like how easy it is to set up project folders, load project-specific library resources, test hardware connections, and handle version control using GitHub. 
             Although the interface is very different, everything that can be found in the Official Arduino IDE can be found in PlatformIO. 
         </p>
+
+        <img src="./Images/PlatformIO.png">
+        <p>
+            Figure 8.) Snapshot of the PlatformIO developer toolkit inside a VSCode IDE. PlatformIO hosts a full suite of developer tools for IOT, Andriod, and IOS projects.
+        </p>
+
         <p>
             The downsides of PlatformIO include its' relatively large project folder sizes and a less-than-intuitive file management system that can really eat up memory 
             if care is not taken when creating new projects and/or sketches. PlatformIO has a sophisticated toolset that is perhaps better suited to the professional 
@@ -558,9 +565,54 @@
         </p>
 
         <p>
-            The second thing I learned, was how to create a free, live-stream database API resource, that I can use to hold sensor variables that should be relatively to pull in using a REACT hook. This assists with next step of the 
-            project: creating an API resource page with REACT and NodeJS. Essentially, this database resource waits for the ESP-8266 Wifi tranceiver to transmit data that it will collect from the TX/RX ports of the Arduino Uno that was 
+            The second thing I learned, was how to create a free, live-stream database resource for the REST API. Firebase offers a tier of free-service that offers 
+            tools that I can use to host a set of cloud-based sensor variables that should be relatively easy to pull in with a REACT hook. Unfortunately, I was unable 
+            to establish a true database connection with the ESP-8266 this week, as my time was spent downloading drivers and libraries, setting up external resources, 
+            investigating prospective server architectures, etc. Right now, I have the ESP-8266 chip loaded with a sketch that instructs it to monitor its' D2 and D3 
+            pins for GPIOS events being broadcast on COM8 serial monitor by the Ardunino Uno (i.e., the sensor data that we want to relocate to the cloud).
+            
+            This assists with next step 
+            of the project: creating an API resource page with REACT and NodeJS. Essentially, this database resource waits for the ESP-8266 Wifi tranceiver to transmit data that it will collect from the TX/RX ports of the Arduino Uno that was 
             integrated with the analytical probe circuits in <a href="#week_7">week 7</a>
+        </p>
+
+        <img src="/Images/Firebase_Rules.png">
+        <p>
+            Figure 9.) Database rule definition for the real-time Firebase REST API database resource. Data will be transmitted to this URL from the ESP-8266 device 
+            endpoint. The data hosted at this URI can be encorporated into a REACT hook, in order to display the realtime sensor data as an HTML-DOM object. 
+        </p>
+
+        <img src="./Images/Uno_ESP_Laptop_Connections.jpg">
+        <p>
+            Photo of the USB serial connections used to program the Arduino Uno and ESP-8266 (12E) singleboard computers. Provided with the correct sketch and an 
+            uninterrupted power-supply, each of these devices will operate under stand-alone conditions, with little to no external computing resources required to 
+            drive the system. The Uno is running on COM8, while the ESP-8266 is running on COM9. Both boards are programmed using USB serial connections to my local 
+            laptop.
+        </p>
+
+        <p>
+            Other major breakthroughs this week included loading the drivers and establishing an initial LAN WiFi connection with the ESP-8266 tranceiver. The 
+            primary obstacle in getting data exported to the cloud this week was establishing a serial connection between the Uno and ESP-8266. After investigating 
+            a LOT of tutorials on ESP-8266 (again, 12E), I realized that the Uno is built with a set of serial broadcast pins (labeled "TX"/"RX") that I should be able 
+            to use to send data from the Uno circuit to my ESP-8266, where the data can be repackaged and uploaded to the realtime database.
+        </p>
+
+        <img src="./Images/Uno_to_ESP_Serial_TXRX_Ports.jpg">
+        <p>
+            Figure 10.) TX/RX serial communication ports, which will be used for broadcasting the data on COM8 to the ESP-8266 WiFi transceiver.
+        </p>
+
+        <img src="/Images/ESP8266_breadboard.jpg">
+        <p>
+            Figure 11.) ESP-8266 (12E) Breadboard jumper cable connections for voltage elevation and serial monitoring on D2/D3.
+        </p>
+
+        <h5>Week 9 Reflection</h5>
+        <p>
+            Week 9 showed me that the complexity of this REST API project should not be underestimated. My first goal for week 10 will be to collect, format, and 
+            transfer data the packets containing the sensor information from the Uno to the ESP-8266 and verify this transmission using the serial monitor on COM9. 
+            After this, I will most likely be studying JSON transfer protocols to format the data for transmission to the realtime database. I expect this to be 
+            somewhat of a steep learning curve, given my relative unfamiliarity with JSON-based data systems. 
         </p>
 
     </div>
