@@ -582,23 +582,45 @@
 
         <img src="./Images/Firebase_Rules.png">
         <p>
-            <strong>Figure 9.)</strong> Database rule definition for the real-time Firebase REST API database resource. Data will be transmitted to this URL from the ESP-8266 device 
-            endpoint. The data hosted at this URI can be encorporated into a REACT hook, in order to display the realtime sensor data as an HTML-DOM object. 
+            <strong>Figure 9.)</strong> Database rule definition for the Google Firebase REST API database resource. Data will be transmitted to this URL directly from the 
+            ESP-8266 endpoint monitoring device. The JSON formatted data hosting that this cloud-based resource provides will enable the REACT-based REST API to pull these 
+            data objects in under the context of a REACT hook, then abstract and render the resource in a browser window using a preconstructed DOM object(s). 
         </p>
 
         <img src="./Images/Uno_ESP_Laptop_Connections.jpg">
         <p>
-            <strong>Figure 10.)</strong> Photo of the USB serial connections used to program the Arduino Uno and ESP-8266 (12E) singleboard computers. Provided with the correct sketch and an 
-            uninterrupted power-supply, each of these devices will operate under stand-alone conditions, with little to no external computing resources required to 
-            drive the system. The Uno is running on COM8, while the ESP-8266 is running on COM9. Both boards are programmed using USB serial connections to my local 
-            laptop.
+            <strong>Figure 10.)</strong> A photo of the USB serial connections used to program the Arduino Uno and ESP-8266 (12E) singleboard computer cards. Provided 
+            the correct sketch power-supply, each of these devices is capable of operating on a stand-alone basis, with little to no external computing resources (other 
+            than WiFI) required to drive the system. The Uno is running on COM8, while the ESP-8266 is running on COM9. Both boards are programmed using USB serial 
+            connections to my local laptop. NodeMCU and NodeJS are two popular frameworks for hosting an enormous variety of WiFi-enabled services. Including network 
+            adapter and/or router logic, DNS server systems, IP-address based resources (such as our monitoring unit), network switches, and more. 
         </p>
 
         <p>
-            The other major breakthroughs this week included loading the drivers and establishing an initial LAN WiFi connection with the ESP-8266 tranceiver. The 
-            primary obstacle in getting data exported to the cloud this week was establishing a serial connection between the Uno and ESP-8266. After investigating 
+            The other major breakthrough this week was loading the drivers and connecting the ESP-8266 tranceiver to my local WiFi network using WiFi login credentials. 
+            The primary obstacle in getting data exported to the cloud this week was establishing a serial connection between the Uno and ESP-8266. After investigating 
             a LOT of tutorials on ESP-8266 (again, 12E), I realized that the Uno is built with a set of serial broadcast pins (labeled "TX"/"RX") that I should be able 
             to use to send data from the Uno circuit to my ESP-8266, where the data can be repackaged and uploaded to the realtime database.
+        </p>
+
+        <p>
+            The very next step is to receive the sensor data packets on COM9 (see figure 8 for reference) and verify the receipt of data presented on the TX/RX 
+            communication ports of the Arduino Uno. This will involve transforming the TX pin into a broadcast object in the Uno boards' existing driver code, then 
+            packaging the pH/TDS/Temperature data into a serial packet and presenting it to the GPIOS pins that are already listening for input on the ESP-8266(12E) 
+            serial monitor. All Baud rates are currently set at 9600.
+        </p>
+        <p>
+            After this serial connection has been established, I will need to repackage the data within the ESP-8266 logic and invoke a call service using a Node.js or 
+            NodeMCU object and submit a POST request to the Firebase DB URL address (after providing the appropriate credential, of course). The last step in setting up 
+            the API database resource will probably involve configuring the settings of my realtime database resource. Then, it is on to the final stage of the project, 
+            which involves programming a single-page web application in REACT to pull in the JSON formatted database resource and present it to the user. 
+        </p>
+        <p>
+            <i>
+                <b>
+                    Until next time!
+                </b>
+            </i>
         </p>
 
         <img src="./Images/Uno_to_ESP_Serial_TXRX_Ports.jpg">
