@@ -8,6 +8,12 @@
 
     <script src="./bundle.js"></script>
 
+    <script>
+        var iframe = document.getElementById("custom_iframe");
+        iframe.width = iframe.contentWindow.document.body.scrollWidth;
+        iframe.height = iframe.contentWindow.document.body.scrollHeight;
+     </script>
+
     <title>Arduino Greenhouse Monitor Project</title>
 </head>
 <body>
@@ -44,7 +50,7 @@
                 <td>
                     <a href="#week_6">Week 6</a> was spent assembling the Greenhouse monitor breadboard and establishing circuit 
                     connections with the Arduino microcontroller. Besides testing things out a little, I also spotted a new learning 
-                    (Udemy) resource about microservice architectures. I managed to get the pH probe meter function and the temperature probe 
+                    resource on Udemy about microservice architectures. I managed to get the pH probe meter function and the temperature probe 
                     functions up and running this week, with real-time measurements displayed in the Arduino IDE Serial Monitor window...
                 </td>
             </tr>
@@ -71,7 +77,11 @@
                     Week 9
                 </td>
                 <td>
-                    TBD
+                    <a href="#week_9">Week 9</a> was filled with action-packed learning experiences, as I explored the Google 
+                    firebase realtime database tools, transformed .ino files into .cpp, and investigated a tremendous variety
+                    of WiFi capabilities provided by various libraries to unlock the capabilities of the Ardiuno ESP-8266 (12E) 
+                    WiFi transceiver, which was added to the REST API Monitor bread board this week. Click <a href="#week_9">here</a>
+                    to read more.
                 </td>
             </tr>
             <tr>
@@ -474,6 +484,7 @@
 
 
         <img src="./Images/FIREBASE.png">
+        
         <p>
             Figure 6.) Week 8 was spent finding the "perfect" API framework for the Arduino REST API Monitor. After searching for 
             "ESP-8266 API architectures" and narrowing the results to match the model of my ESP-8266 transceiver chip, I found a 
@@ -499,7 +510,58 @@
             If you would like to learn what Firebase is, who uses it, and what it is used for, please enjoy the following video.
         </p>
 
-        <iframe width="560" height="315" src="https://www.google.com/search?q=what+is+google+firebase&rlz=1C1SQJL_enUS923US924&oq=what+is+google+firebase&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIICAEQABgWGB4yCAgCEAAYFhgeMggIAxAAGBYYHjIICAQQABgWGB4yCAgFEAAYFhgeMgoIBhAAGA8YFhgeMggIBxAAGBYYHtIBCDYzODVqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:cb278840,vid:vAoB4VbhRzM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen, id="firebase_in_100_seconds"></iframe>
+        <iframe id="custom_iframe" src="https://www.google.com/search?q=what+is+google+firebase&rlz=1C1SQJL_enUS923US924&oq=what+is+google+firebase&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIICAEQABgWGB4yCAgCEAAYFhgeMggIAxAAGBYYHjIICAQQABgWGB4yCAgFEAAYFhgeMgoIBhAAGA8YFhgeMggIBxAAGBYYHtIBCDYzODVqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:cb278840,vid:vAoB4VbhRzM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen, id="firebase_in_100_seconds"></iframe>
+
+
+        <h4 id="week_9">
+            Week 9: Exploring Arduino ESP-8266 (12E), Google Firebase, and PlatformIO
+        </h4>
+        <p>
+            Week 9 was dedicated to the investigation of cloud-based API services, Arduino ESP-8266 WiFi hardware and sketch libraries (e.g., SoftwareSerial, NodeJS, 
+            NodeMCU, etc.), Google Firebase (live database API resource), and a new VSCode IDE platform for managing Arduino projects called "PlatformIO".
+        </p>
+
+        <img src="./Images/ESP8266_Realtime_DB.png">
+        <p>Figure 7.) The most recent objective of the Greenhouse Monitor REST API project involves establishing a database connection with the ESP-8266 (12E) Wifi 
+            tranceiver to push data to a cloud based API resource that can be read by (e.g.) REACT Hooks at a later stage of the project. Completing this stage of the 
+            project will involve establishing a TX/RX-based serial connection between the Arduino Uno and the ESP-8266 Wifi device.  
+        </p>
+
+        <h5>
+            Google Firebase, PlatformIO, and ESP-8266 (12E) WiFi Libraries
+        </h5>
+        <p>
+            <i>
+                The tutorials that I lined out last week were helpful, but not in the way I thought they would be.
+            </i>
+        </p>
+        <p>
+            The tutorials I found for connecting the ESP-8266 to a live database hosted by the Google Firebase platform were not as straightforward as they first appeared. 
+            After a few honest attempts at reproducing thier source code and device configuration, I realized that this stage of the project would not be as simple as 
+            following a few simple tutorials. The tutorials did turn out to be useful for highlighting several of the missing tools in my current Arduinio IOT arsenal, 
+            leading to progress in the development of the WiFi Greenhouse Monitor REST API Project. 
+        </p>
+        <p>
+            The first benefit I derived from these tutorials was an past-due introduction to an IDE system called PlatformIO. PlatformIO is a tool suit that enables 
+            IOT application developers to organize sketches within a platform-independent environment and apply version control using Git. The package suite offers 
+            numerous other tools; including gcc and g++ compilers, linters, board managers, library managers, GitHub extensions, unit testing frameworks, and a whole 
+            lot more. Andriod, IOT, and IOS developers use PlatformIO to organize projects, fulfill software licensing standards, and prepare thier applications for production. 
+            I like how easy it is to set up project folders, load project-specific library resources, test hardware connections, and handle version control using GitHub. 
+            Although the interface is very different, everything that can be found in the Official Arduino IDE can be found in PlatformIO. 
+        </p>
+        <p>
+            The downsides of PlatformIO include its' relatively large project folder sizes and a less-than-intuitive file management system that can really eat up memory 
+            if care is not taken when creating new projects and/or sketches. PlatformIO has a sophisticated toolset that is perhaps better suited to the professional 
+            developer than the ameteur hobbyist. One might say that relative ease of project creation in PlatformIO comes at the expense of a somewhat more 
+            complicated file management system for handling the resulting files. Thus, moving forward, I will prefer to use the Arduino IDE for rough sketches and 
+            PlatformIO for developing the subsequent, stable software. 
+        </p>
+
+        <p>
+            The second thing I learned, was how to create a free, live-stream database API resource, that I can use to hold sensor variables that should be relatively to pull in using a REACT hook. This assists with next step of the 
+            project: creating an API resource page with REACT and NodeJS. Essentially, this database resource waits for the ESP-8266 Wifi tranceiver to transmit data that it will collect from the TX/RX ports of the Arduino Uno that was 
+            integrated with the analytical probe circuits in <a href="#week_7">week 7</a>
+        </p>
 
     </div>
     <hr>
