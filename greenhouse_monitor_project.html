@@ -139,7 +139,7 @@
         <!-- Save this figure for later discussion when building a serial bus becomes necessary -->
         <img src="./Images/Breadboard-Pinout.png">
         <p>
-            Figure 1.) Basic Arduino Breadboard circuit pinout diagram. The top and bottom power rails (red) 
+            <strong>Figure 1.)</strong> Basic Arduino Breadboard circuit pinout diagram. The top and bottom power rails (red) 
             are divided into 3.3V and 5V power supply sections. Ground rails are shown in blue and can be used 
             by any circuit component requiring a ground. The center (green) pinout locations are reserved for 
             circuit components, and for our intents and purposes acts as a serial communication hub.
@@ -172,7 +172,7 @@
         <img src="./Images/pH_meter_thermometer.jpg">
 
         <p>
-            Figure 2.) One of the most exciting moments this week was getting the drivers for the pH meter and thermocouple up and running. Since 
+            <strong>Figure 2.)</strong> One of the most exciting moments this week was getting the drivers for the pH meter and thermocouple up and running. Since 
             I don't have any real calibrating solutions on hand at the moment, I decided to calibrate the pH probe using milk and 
             vinegar. As awful as that sounds, the attempt went well and I managed to produce some surprisingly accurate values when 
             I tested it with an off-curve calibration standard (pH=6.86).
@@ -245,7 +245,7 @@
             additional start-up time owing to the increased buffer time needed to collect TDS sensor measurements.
         </p>
         <img src="./Images/week7_update.jpg">
-        <p>Figure 3.) Circuit connections for the pH/temperature/TDS serial monitor device.</p>
+        <p><strong>Figure 3.)</strong> Circuit connections for the pH/temperature/TDS serial monitor device.</p>
 
         <h5>Temperature, pH, and TDS Driver Sketch (Serial Output)</h5>
         
@@ -413,14 +413,14 @@
 
         <img src="./Images/serial_reading_tds_startup.png">
         <p>
-            Figure 4.) Serial monitor output displaying the default start up TDS meter response. The pH meter has been calibrated and 
+            <strong>Figure 4.)</strong> Serial monitor output displaying the default start up TDS meter response. The pH meter has been calibrated and 
             is currently held in a pH testing standard (6.86) that was not used in the calibration and has been used to house the pH 
             probe for a couple of days.
         </p>
 
         <img src="./Images/serial_reading_tds_initial_reading.png">
         <p>
-            Figure 5.) Serial monitor output displaying an initial measurement of the TDS probe after 
+            <strong>Figure 5.)</strong> Serial monitor output displaying an initial measurement of the TDS probe after 
             equilibration. This nutrient solution was replaced about 2 days ago, so this is TDS measurement should represent a nice baseline. 
             The pH measurement is from 2-day old 6.86 pH buffer solution. The water from my refrigerator registers at 180ppm (TDS units) on this device.
         </p>
@@ -486,7 +486,7 @@
         <img src="./Images/FIREBASE.png">
         
         <p>
-            Figure 6.) Week 8 was spent finding the "perfect" API framework for the Arduino REST API Monitor. After searching for 
+            <strong>Figure 6.)</strong> Week 8 was spent finding the "perfect" API framework for the Arduino REST API Monitor. After searching for 
             "ESP-8266 API architectures" and narrowing the results to match the model of my ESP-8266 transceiver chip, I found a 
             set of articles about Ardunio ESP-8266 and Firebase IOT web app development package. The Firebase system provides 
             a series of "node module" template classes that can be used to construct various microservice-based web, mobile, 
@@ -527,7 +527,7 @@
 
         <img src="./Images/ESP8266_Realtime_DB.png">
         <p>
-            Figure 7.) The most recent objective of the Greenhouse Monitor REST API project involves establishing a database connection with the ESP-8266 (12E) Wifi 
+            <strong>Figure 7.)</strong> The most recent objective of the Greenhouse Monitor REST API project involves establishing a database connection with the ESP-8266 (12E) Wifi 
             tranceiver to push data to a cloud based API resource that can be read by (e.g.) REACT Hooks at a later stage of the project. Completing this stage of the 
             project will involve establishing a TX/RX-based serial connection between the Arduino Uno and the ESP-8266 Wifi device.  
         </p>
@@ -557,7 +557,7 @@
 
         <img src="./Images/PlatformIO.png">
         <p>
-            Figure 8.) Snapshot of the PlatformIO developer toolkit inside a VSCode IDE. PlatformIO hosts a full suite of developer tools for IOT, Andriod, and IOS projects.
+            <strong>Figure 8.)</strong> Snapshot of the PlatformIO developer toolkit inside a VSCode IDE. PlatformIO hosts a full suite of developer tools for IOT, Andriod, and IOS projects.
         </p>
 
         <p>
@@ -582,13 +582,13 @@
 
         <img src="./Images/Firebase_Rules.png">
         <p>
-            Figure 9.) Database rule definition for the real-time Firebase REST API database resource. Data will be transmitted to this URL from the ESP-8266 device 
+            <strong>Figure 9.)</strong> Database rule definition for the real-time Firebase REST API database resource. Data will be transmitted to this URL from the ESP-8266 device 
             endpoint. The data hosted at this URI can be encorporated into a REACT hook, in order to display the realtime sensor data as an HTML-DOM object. 
         </p>
 
         <img src="./Images/Uno_ESP_Laptop_Connections.jpg">
         <p>
-            Figure 10.) Photo of the USB serial connections used to program the Arduino Uno and ESP-8266 (12E) singleboard computers. Provided with the correct sketch and an 
+            <strong>Figure 10.)</strong> Photo of the USB serial connections used to program the Arduino Uno and ESP-8266 (12E) singleboard computers. Provided with the correct sketch and an 
             uninterrupted power-supply, each of these devices will operate under stand-alone conditions, with little to no external computing resources required to 
             drive the system. The Uno is running on COM8, while the ESP-8266 is running on COM9. Both boards are programmed using USB serial connections to my local 
             laptop.
@@ -603,12 +603,12 @@
 
         <img src="./Images/Uno_to_ESP_Serial_TXRX_Ports.jpg">
         <p>
-            Figure 10.) TX/RX serial communication ports, which will be used for broadcasting the data on COM8 to the ESP-8266 WiFi transceiver.
+            <strong>Figure 10.)</strong> TX/RX serial communication ports, which will be used for broadcasting the data on COM8 to the ESP-8266 WiFi transceiver.
         </p>
 
         <img src="./Images/ESP8266_breadboard.jpg">
         <p>
-            Figure 11.) ESP-8266 (12E) Breadboard jumper cable connections for voltage elevation and serial monitoring on D2/D3.
+            <strong>Figure 11.)</strong> ESP-8266 (12E) Breadboard jumper cable connections for voltage elevation and serial monitoring on D2/D3.
         </p>
 
         <h5>Week 9 Reflection</h5>
