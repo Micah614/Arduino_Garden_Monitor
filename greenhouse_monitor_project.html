@@ -528,11 +528,11 @@
 
         <!-- <iframe width="560" height="315" src="https://www.youtube.com/watch?v=vAoB4VbhRzM" frameborder="0" allowfullscreen></iframe> -->
 
-        <div><a href="#" class="play-video">Play Video</a></div>
-        <div><a href="#" class="stop-video">Stop Video</a></div>
-        <div><a href="#" class="pause-video">Pause Video</a></div>
+        <div><a href="#firebase_video" class="play-video">Play Video</a></div>
+        <div><a href="#firebase_video" class="stop-video">Stop Video</a></div>
+        <div><a href="#firebase_video" class="pause-video">Pause Video</a></div>
         
-        <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/watch?v=vAoB4VbhRzM" frameborder="0" allowfullscreen></iframe>
+        <iframe class="youtube-video" width="560" height="315" id="firebase_video" src="https://www.youtube.com/watch?v=vAoB4VbhRzM" frameborder="0" allowfullscreen></iframe>
 
         </object>
 
@@ -649,7 +649,9 @@
 
         <img src="./Images/ESP8266_breadboard.jpg">
         <p>
-            <strong>Figure 11.)</strong> ESP-8266 (12E) Breadboard jumper cable connections for voltage elevation and serial monitoring on D2/D3. In 
+            <strong>Figure 11.)</strong> The INCORRECT ESP-8266 (12E) Breadboard jumper cable configuration for serial monitoring on the ESP. 
+            Owing to complexities in the inner-workings of the ESP8266, GPIOS communication is only available on the 
+            D1 and D2 digital pins of this WiFi enabled chip. 
         </p>
 
         <h5>Week 9 Reflection</h5>
@@ -673,14 +675,14 @@
 
         <!-- <iframe width="560" height="315" src="https://youtu.be/Xz--ZNdVQZI" frameborder="0" allowfullscreen></iframe> -->
 
-        <div><a href="#" class="play-video">Play Video</a></div>
-        <div><a href="#" class="stop-video">Stop Video</a></div>
-        <div><a href="#" class="pause-video">Pause Video</a></div>
+        <div><a href="#master_slave_sketch_video" class="play-video">Play Video</a></div>
+        <div><a href="#master_slave_sketch_video" class="stop-video">Stop Video</a></div>
+        <div><a href="#master_slave_sketch_video" class="pause-video">Pause Video</a></div>
         
-        <iframe class="youtube-video" width="560" height="315" src="https://youtu.be/Xz--ZNdVQZI" frameborder="0" allowfullscreen></iframe>
+        <iframe class="youtube-video" width="560" height="315" id="master_slave_sketch_video" src="https://youtu.be/Xz--ZNdVQZI" frameborder="0" allowfullscreen></iframe>
 
         <p>
-            This fabulous set of sketches was found courtesy of the tutorial at 
+            This fabulous set of sketches is presented courtesy of the opensource web tutorial located at 
             <cite>
                 https://www.electronicwings.com/nodemcu/nodemcu-i2c-with-arduino-ide
             </cite>
