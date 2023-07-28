@@ -513,17 +513,7 @@
             If you would like to learn what Firebase is, who uses it, and what it is used for, please enjoy the following video.
         </p>
 
-        <!-- <iframe id="custom_iframe" src="https://www.google.com/search?q=what+is+google+firebase&rlz=1C1SQJL_enUS923US924&oq=what+is+google+firebase&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIICAEQABgWGB4yCAgCEAAYFhgeMggIAxAAGBYYHjIICAQQABgWGB4yCAgFEAAYFhgeMgoIBhAAGA8YFhgeMggIBxAAGBYYHtIBCDYzODVqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:cb278840,vid:vAoB4VbhRzM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen, id="firebase_in_100_seconds"></iframe> -->
-        <!-- <iframe width="420" height="315"
-        src="https://www.youtube.com/watch?v=vAoB4VbhRzM">
-        </iframe> -->
-
-        <!-- <video width="320" height="240" controls> -->
-            <!-- <source src="https://www.youtube.com/watch?v=vAoB4VbhRzM"> -->
-            <!-- <source src="/build/videos/arcnet.io(7-sec).mp4" type=video/mp4> -->
-        <!-- </video> -->
-
-        <video src="https://www.youtube.com/watch?v=vAoB4VbhRzM"  controls="true"></video>
+        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=vAoB4VbhRzM" frameborder="0" allowfullscreen></iframe>
 
         </object>
 
@@ -656,24 +646,22 @@
             Week 10: Establishing serial communication between NodeMCU and the Uno Sensor Harness 
         </h4>
         <p>
-            In <a href="#week_10">week 10</a>, I uncovered a set of GPIOS master-slave routines that I will modify to establish a 
-            that serial connection between the ESP8266 NodeMCU and the Arduino sensor harness. These GPIOS communication sketches 
-            will transmit sensor data to the ESP8266, where it will be packaged and routed to the NoSQL database that was developed 
-            in week 8.
+            In week 10, I uncovered a set of GPIOS master-slave routines that I can use to establish a serial connection between the 
+            ESP8266 NodeMCU and the Arduino sensor harness and kick the data over to the NodeMCU server (code update will be posted soon). 
+            These GPIOS communication sketches will be used to transmit sensor data to the ESP8266, where it can be packaged and routed to 
+            the free-tier Google NoSQL database that I set up in week 8.
         </p>
-
-        <!-- <iframe width="420" height="315"
-        src="https://youtu.be/Xz--ZNdVQZI">
-        </iframe> -->
-        <!-- <video width="320" height="240" controls> -->
-            <!-- <source src="https://youtu.be/Xz--ZNdVQZI" type=video/mp4> -->
-            <!-- <source src="/build/videos/arcnet.io(7-sec).mp4" type=video/mp4> -->
-        <!-- </video> -->
-
-        <!-- <video src="https://youtu.be/Xz--ZNdVQZI"  controls="true"></video> -->
 
         <iframe width="560" height="315" src="https://youtu.be/Xz--ZNdVQZI" frameborder="0" allowfullscreen></iframe>
 
+        <p>
+            This fabulous set of sketches was found courtesy of the tutorial at 
+            <cite>
+                https://www.electronicwings.com/nodemcu/nodemcu-i2c-with-arduino-ide
+            </cite>
+            , and contains the logic required to establish the mission critical GPIOS connection between the Arduino Uno and ESP8266-12E NodeMCU device. 
+            <i>It took a <strong>long</strong> time to find these sketches!</i>
+        </p>
 
         <img src="./Images/week_10_ESP_connections.jpg">
         <p>
