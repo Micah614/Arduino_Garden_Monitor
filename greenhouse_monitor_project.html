@@ -12,6 +12,19 @@
         var iframe = document.getElementById("custom_iframe");
         iframe.width = iframe.contentWindow.document.body.scrollWidth;
         iframe.height = iframe.contentWindow.document.body.scrollHeight;
+
+        $('a.play-video').click(function(){
+            $('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+        });
+        
+        $('a.stop-video').click(function(){
+            $('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+        });
+        
+        $('a.pause-video').click(function(){
+            $('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
+        });
+
      </script>
 
     <title>Arduino Greenhouse Monitor Project</title>
@@ -513,7 +526,13 @@
             If you would like to learn what Firebase is, who uses it, and what it is used for, please enjoy the following video.
         </p>
 
-        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=vAoB4VbhRzM" frameborder="0" allowfullscreen></iframe>
+        <!-- <iframe width="560" height="315" src="https://www.youtube.com/watch?v=vAoB4VbhRzM" frameborder="0" allowfullscreen></iframe> -->
+
+        <div><a href="#" class="play-video">Play Video</a></div>
+        <div><a href="#" class="stop-video">Stop Video</a></div>
+        <div><a href="#" class="pause-video">Pause Video</a></div>
+        
+        <iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/watch?v=vAoB4VbhRzM" frameborder="0" allowfullscreen></iframe>
 
         </object>
 
@@ -652,7 +671,13 @@
             the free-tier Google NoSQL database that I set up in week 8.
         </p>
 
-        <iframe width="560" height="315" src="https://youtu.be/Xz--ZNdVQZI" frameborder="0" allowfullscreen></iframe>
+        <!-- <iframe width="560" height="315" src="https://youtu.be/Xz--ZNdVQZI" frameborder="0" allowfullscreen></iframe> -->
+
+        <div><a href="#" class="play-video">Play Video</a></div>
+        <div><a href="#" class="stop-video">Stop Video</a></div>
+        <div><a href="#" class="pause-video">Pause Video</a></div>
+        
+        <iframe class="youtube-video" width="560" height="315" src="https://youtu.be/Xz--ZNdVQZI" frameborder="0" allowfullscreen></iframe>
 
         <p>
             This fabulous set of sketches was found courtesy of the tutorial at 
