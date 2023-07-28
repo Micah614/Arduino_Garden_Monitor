@@ -12,19 +12,6 @@
         var iframe = document.getElementById("custom_iframe");
         iframe.width = iframe.contentWindow.document.body.scrollWidth;
         iframe.height = iframe.contentWindow.document.body.scrollHeight;
-
-        $('a.play-video').click(function(){
-            $('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
-        });
-        
-        $('a.stop-video').click(function(){
-            $('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
-        });
-        
-        $('a.pause-video').click(function(){
-            $('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
-        });
-
      </script>
 
     <title>Arduino Greenhouse Monitor Project</title>
