@@ -514,9 +514,14 @@
         </p>
 
         <!-- <iframe id="custom_iframe" src="https://www.google.com/search?q=what+is+google+firebase&rlz=1C1SQJL_enUS923US924&oq=what+is+google+firebase&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIICAEQABgWGB4yCAgCEAAYFhgeMggIAxAAGBYYHjIICAQQABgWGB4yCAgFEAAYFhgeMgoIBhAAGA8YFhgeMggIBxAAGBYYHtIBCDYzODVqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#fpstate=ive&vld=cid:cb278840,vid:vAoB4VbhRzM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen, id="firebase_in_100_seconds"></iframe> -->
-        <iframe width="420" height="315"
+        <!-- <iframe width="420" height="315"
         src="https://www.youtube.com/watch?v=vAoB4VbhRzM">
-        </iframe>
+        </iframe> -->
+
+        <video width="320" height="240" controls>
+            <source src="https://www.youtube.com/watch?v=vAoB4VbhRzM">
+            <!-- <source src="/build/videos/arcnet.io(7-sec).mp4" type=video/mp4> -->
+        </video>
 
         </object>
 
@@ -633,7 +638,7 @@
 
         <img src="./Images/ESP8266_breadboard.jpg">
         <p>
-            <strong>Figure 11.)</strong> ESP-8266 (12E) Breadboard jumper cable connections for voltage elevation and serial monitoring on D2/D3.
+            <strong>Figure 11.)</strong> ESP-8266 (12E) Breadboard jumper cable connections for voltage elevation and serial monitoring on D2/D3. In 
         </p>
 
         <h5>Week 9 Reflection</h5>
@@ -649,17 +654,22 @@
             Week 10: Establishing serial communication between NodeMCU and the Uno Sensor Harness 
         </h4>
         <p>
-            In Week 10, I uncovered a master-slave GPIOS-based serial communication protocol that will be integrated into the logic of the 
-            primary drivers to present sensor data to the NodeMCU webserver device. 
+            In <a href="#week_10">week 10</a>, I uncovered a set of GPIOS master-slave routines that I will modify to establish a 
+            that serial connection between the ESP8266 NodeMCU and the Arduino sensor harness. These GPIOS communication sketches 
+            will transmit sensor data to the ESP8266, where it will be packaged and routed to the NoSQL database that was developed 
+            in week 8.
         </p>
 
         <!-- <iframe width="420" height="315"
         src="https://youtu.be/Xz--ZNdVQZI">
         </iframe> -->
         <video width="320" height="240" controls>
-            <source src="https://youtu.be/Xz--ZNdVQZI" type=video/mp4>
+            <source src="https://youtu.be/Xz--ZNdVQZI">
             <!-- <source src="/build/videos/arcnet.io(7-sec).mp4" type=video/mp4> -->
-          </video>
+        </video>
+
+        <img src="./Images/week_10_ESP_connections.jpg">
+        <img src="./Images/week_10_Uno_connections.jpg">
 
     </div>
     <hr>
