@@ -108,7 +108,10 @@
                     Week 12
                 </td>
                 <td>
-                    TBD
+                    I decided to drop Google Firebase RTDB that I developed in the previous weeks after reading the fine print of the billing terms. That's 
+                    OK, as it turns out, Arduino IOT Cloud offers a REALLY free tier of service that I was able to use to get the backend of my Greenhouse 
+                    Monitor API up and running with. This week's content includes a video demonstration of the new API endpoint and lots of interesting 
+                    observations about the Arduino IOT Cloud platform. Take a look!
                 </td>
             </tr>
         </table>
@@ -666,12 +669,6 @@
 
         <iframe width="560" height="315" src="https://youtu.be/FOUhHd6UPWE" frameborder="0" allowfullscreen></iframe>
 
-        <!-- <div><a href="#" class="play-video">Play Video</a></div>
-        <div><a href="#" class="stop-video">Stop Video</a></div>
-        <div><a href="#" class="pause-video">Pause Video</a></div> -->
-        
-        <!-- <iframe class="youtube-video" width="560" height="315" id="master_slave_sketch_video" src="https://youtu.be/Xz--ZNdVQZI" frameborder="0" allowfullscreen></iframe> -->
-
         <p>
             This fabulous set of sketches is presented courtesy of the opensource web tutorial located at 
             <cite>
@@ -707,9 +704,60 @@
 
         <p>
             This week's exciting conclusion to the 12-week Arduino REST API Greenhouse Monitor Project involved formatting the tuples that 
-            were successfully collected at the NodeMCU (ESP8266-12E) GPIOS interface last week. This involved becoming acquainted with the 
-            Google Firebase Documentation (see the <a href="https://firebase.google.com/docs/database/cpp/structure-data"> google docs </a> 
-            for more information.)
+            were successfully collected at the NodeMCU (ESP8266-12E) GPIOS interface last week. After taking a hard look at the fine print 
+            in the Google Firebase terms and conditions, I decided to dump Firebase and go with the Arduino IOT Cloud Service instead (Arduino offers 
+            a really really free cloud plan, <cite><a href="https://docs.arduino.cc/arduino-cloud/">https://docs.arduino.cc/arduino-cloud/</a>
+            </cite> for more information.)
+        </p>
+
+        <p>
+            Here is a YouTube video explaining this week's progress on the API monitor project. 
+        </p>
+        
+        <iframe width="560" height="315" src="https://www.youtube.com/watch?v=parAb3e-nbQ" frameborder="0" allowfullscreen></iframe>
+        
+        <p>
+            The monitor is indeed working as expected, I can even view the real-time stat's usig the Arduino IOT application on my phone! 
+            However, the API is still a bit less stable than I would prefer (more about this shortly).
+        </p>
+
+        <img src="./Images/API_Monitor_Mobile_1.png"> <!-- image of the Adruino Tent Monitor API in a mobile environment. -->
+        <p>
+            Figure 13.) The API's response was fairly unstable when the cloud connection was first established, but began to even out over 
+            time. Both boards are currently dependent on my laptop bus for power. 
+        </p>
+
+        <img src="./Images/Carrots_With_Sensor.jpg">  <!-- image of carrots with capacitive soil moisture detector embedded. -->
+        <p>
+            Figure 14.) The new capacitive soil sensors REALLY seem to help me avoid over-watering. My latest batch of carrot seedlings 
+            certainly appear to appreciate the extra attention. The second to last and last tuple variables represent the current water 
+            saturation of my green onions and finger carrots, respectively.
+        </p>
+
+        <h5>What's Next For the Arduino REST API Monitoring Project?</h5>
+        <p>
+            I have a series of hardware and software improvements in mind for the upcoming weeks. Most of these ideas are in the 
+            early refinement stage, but some of the improvements might include installing an US outlet power adaptor to the Uno sensor 
+            harness and associated breadboard. This way, I can get this IOT device operating in a standalone condition, instead of relying 
+            on my local laptop bus. At the moment I cannot operate the device unless my laptop is powered on, I need to change that.
+        </p>
+        <p>
+            The firmware I developed for this project appears remarkably fault-tolerant. The very nature of these programs seems to imbue 
+            them with an almost indomitable will to connect with the next device. The reason that a standalone power source is so important 
+            is that if this device is able to boot up and operate on its' own, then not even a power outage can stop this bugger from 
+            updating my remote tuple variable. Removing the devices' dependency on my local computer could also help to improve the 
+            availability of my API service, since it appears that the current availability has been hovering at a little less than 50% 
+            over the past 12 hours or so. 
+        </p>
+        <p>
+            I would also like to synchronize and/or adjust the sampling rate at some of these devices. Currently the Uno collects data 
+            at a rate of 1Hz and the NodeMCU draws and relays tuples at a sampling rate of 2Hz. From what I have read, the coordination 
+            LAN and WAN networking events can be critical to an API such as my own.
+        </p>
+        <p>  
+            Now that my data tuple is up in the cloud, I am free to desgin REACT Web Hooks that can help me pull in this remote resource 
+            and use it in the context of a REACT native, Andriod, or basic web application to support (e.g.) UX/UI Dashboards and interaction 
+            with subsequently installed hardware.
         </p>
 
     </div>
