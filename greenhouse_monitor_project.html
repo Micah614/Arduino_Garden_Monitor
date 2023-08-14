@@ -45,39 +45,39 @@
             </tr>
             <tr>
                 <td>
-                    Week 6
+                    <a href="#week_6">Week 6</a>
                 </td>
                 <td>
-                    <a href="#week_6">Week 6</a> was spent assembling the Greenhouse monitor breadboard and establishing circuit 
+                    Week 6 was spent assembling the Greenhouse monitor breadboard and establishing circuit 
                     connections with the Arduino microcontroller. Besides testing things out a little, I also spotted a new learning 
                     resource on Udemy about microservice architectures. I managed to get the pH probe meter function and the temperature probe 
                     functions up and running this week, with real-time measurements displayed in the Arduino IDE Serial Monitor window...
                 </td>
             </tr>
                 <td>
-                    Week 7
+                    <a href="#week_7">Week 7</a>
                 </td>
                 <td>
-                    During <a href="#week_7">Week 7</a> I was able to combine drivers for pH, temperature, and 
+                    During Week 7, I was able to combine drivers for pH, temperature, and 
                     total dissolved solids (TDS) sensors and collect measurements from all three of these devices in the 
                     serial monitor window. I learned a bit about baud rate synchronization this week when I realized... 
                 </td>
             </tr>
             <tr>
                 <td>
-                    Week 8
+                    <a href="#week_8">Week 8</a>
                 </td>
                 <td>
-                    <a href="#week_8">Week 8</a> was spent reasearching REACT applications, JavaScript servers, and API 
+                    Week 8 was spent reasearching REACT applications, JavaScript servers, and API 
                     endpoint generation. Multiple resources for learning about the REACT framework where located, including...
                 </td>
             </tr>
             <tr>
                 <td>
-                    Week 9
+                    <a href="#week_9">Week 9</a>
                 </td>
                 <td>
-                    <a href="#week_9">Week 9</a> was filled with action-packed learning experiences, as I explored the Google 
+                    Week 9 was filled with action-packed learning experiences, as I explored the Google 
                     firebase realtime database tools, transformed .ino files into .cpp, and investigated a tremendous variety
                     of WiFi capabilities provided by various libraries to unlock the capabilities of the Ardiuno ESP-8266 (12E) 
                     WiFi transceiver, which was added to the REST API Monitor bread board this week. Click <a href="#week_9">here</a>
@@ -86,10 +86,10 @@
             </tr>
             <tr>
                 <td>
-                    Week 10
+                    <a href="#week_10">Week 10</a>
                 </td>
                 <td>
-                    In <a href="#week_10">week 10</a>, I uncovered a set of GPIOS master-slave routines that I will modify to establish a 
+                    In week 10, I uncovered a set of GPIOS master-slave routines that I will modify to establish a 
                     that serial connection between the ESP8266 NodeMCU and the Arduino sensor harness. These GPIOS communication sketches 
                     will transmit sensor data to the ESP8266, where it will be packaged and routed to the NoSQL database developed in week 
                     8.
@@ -97,15 +97,15 @@
             </tr>
             <tr>
                 <td>
-                    Week 11
+                    <a href="#week_11">Week 11</a>
                 </td>
                 <td>
-                    ALMOST THERE!!! This <a href="#week_11">week</a> I decided to let the results do a talking with a youtube video that I created. 
+                    ALMOST THERE!!! This week, I decided to let the results do a talking with a little youtube video that I created. 
                 </td>
             </tr>
             <tr>
                 <td>
-                    Week 12
+                    <a href="#week_12">Week 12</a>
                 </td>
                 <td>
                     I decided to drop Google Firebase RTDB that I developed in the previous weeks after reading the fine print of the billing terms. As 
@@ -717,14 +717,14 @@
         <iframe width="560" height="315" src="https://www.youtube.com/watch?v=parAb3e-nbQ" frameborder="0" allowfullscreen></iframe>
         
         <p>
-            The monitor is indeed working as expected, I can even view the real-time stat's usig the Arduino IOT application on my phone! 
+            The monitor is working as expected, I can even view the real-time stat's usig the Arduino IOT application on my phone! 
             However, the API is still a bit less stable than I would prefer (more about this shortly).
         </p>
 
         <img src="./Images/API_Monitor_Mobile_1.png"> <!-- image of the Adruino Tent Monitor API in a mobile environment. -->
         <p>
-            Figure 13.) The API's response was fairly unstable when the cloud connection was first established, but began to even out over 
-            time. Both boards are currently dependent on my laptop bus for power. 
+            Figure 13.) The API's response was unstable when the cloud connection was first established, but began to even out over 
+            time. Both boards still depend on my local laptop bus for power. 
         </p>
 
         <img src="./Images/Carrots_With_Sensor.jpg">  <!-- image of carrots with capacitive soil moisture detector embedded. -->
@@ -733,6 +733,68 @@
             certainly appear to appreciate the extra attention. The second to last and last tuple variables represent the current water 
             saturation of my green onions and finger carrots, respectively.
         </p>
+
+<!-- PROJECT OVERVIEW AND SUMMARY -->
+
+<h4 id="week_12">
+    Week 12: Project Overview and Summary 
+</h4>
+<p>
+    Now it's time to examine how the project went compared with the timeline I set for myself in the project proposal.
+</p>
+
+<p>
+    <u><strong>(GOAL) Week 1: Initial research, project design, and material ordering.<br></strong></u>
+    These goals were certainly accomplished on time as they are included in the <a href="https://micah614.github.io/arduino-indoor-weatherstation/proposal.html">outline and proposal</a>.
+</p>
+<p>
+    <u><strong>(GOAL) Week 2-5: Complete the Freenove Arduino Project Board Tutorial.<br></strong></u>
+    This goal turned out to be a tad unrealistic under the time constraints of 3-4 hours per week. I was able to complete several of the 
+    <a href="">FreeNove Project Board Tutorials</a> however, and I feel that I was able to cover the basics required to complete this project.
+</p>
+<p> 
+    <u><strong>(GOAL) Week 6: Develop the Device Blueprint and Assembly Plan<br></strong></u>
+    I did not get around to designing an true circuit diagram for my IoT device, primarily because the device was in development for most of the 
+    project timeline. I realize now that circuit diagrams are more useful for specifying the connections of well-established devices. 
+</p>
+<p> 
+    <u><strong>(GOAL) Week 7: Assembling, calibrating, and testing the meter functions.<br></strong></u>
+    This aspect of the project was invovled in nearly every step of realizing the device concept. I was able to incorporate pH, TDS, temperature, and capacitative 
+    soil moisture sensors into the Uno board harness. I later determined that I was collecting a null response from the TDS sensor (presumably because it is broken),
+    and so this probe was removed sometime later in the project.
+</p>
+<p> 
+    <u><strong>(GOAL) Week 8: Streaming Data with Bluetooth.<br></strong></u>
+    Realizing that I actually had very limited use for bluetooth capability in my IoT endpoint device, I decided this time would be better spent learning about 
+    microservice architecture patterns that would enable me to configure the JSON database endpoint in week 10 and 11 of the project.
+</p>
+<p> 
+    <u><strong>(GOAL) Week 9: Streaming Data with Wi-Fi.<br></strong></u>
+    This goal was definitely accomplished, as I am now able to read data uploaded to a database URI through my local area WiFi router. API endpoint is currently 
+    demonstrating an average availability of about 0.70 out of 1.0.
+</p>
+<p> 
+    <u><strong>(GOAL) Week 10: Exporting Data as SQL, XML, and JSON<br></strong></u>
+    It was not necessary to format the data using JSON, XML, or SQL during this project. Although I have often thought of including and 
+    onboard memory card and populating an SQLite database file with sensor data that I can view, manipulate or aggregate using SQL queries. 
+    So far however, I have not had many reasons to investigate this option. 
+</p>
+<p> 
+    <u><strong>(GOAL) Week 11: Developing a Simple Web Page to Display the Sensor Data.<br></strong></u>
+    Handling the physical connections, sketch programms, library packages, and JSON database resources turned out to present a big enough challenge 
+    that I was not able to develop a REACT framework within the specified timeframe. This item is next on my list, however, and you will find updates 
+    posted at this URL.
+</p>
+<p> 
+    <u><strong>(GOAL) Week 12: Documentation, Wrap-Up, and Presentation.<br></strong></u>
+    <strong>Summary:</strong> My next steps will be to add an independent power connection to my "thing", to see if this improves the availability 
+    of my API endpoint device. Then I will work on developing a REACT application that makes better use of my Greenhouse Monitor TentTuple. 
+</p>
+
+<p>This semester has been an absolute blast! Thank you all very much and have a wonderful fall semester!</p>
+
+
+<!-- NEXT STEPS IN DEVELOPMENT -->
 
         <h3>What's Next For the Arduino REST API Monitoring Project?</h3>
         <p>
@@ -757,7 +819,7 @@
         <p>  
             Now that my data tuple is up in the cloud, I am free to desgin REACT Web Hooks that can help me pull in this remote resource 
             and use it in the context of a REACT native, Andriod, or basic web application to support (e.g.) UX/UI Dashboards and interaction 
-            with subsequently installed hardware.
+            with subsequently installed hardware devices.
         </p>
 
     </div>
@@ -766,7 +828,7 @@
     <strong><u>Navigation Menu:</u></strong>
     <ul>
         <li>
-            <a href="./index.html"><p>
+            <a href="./index.html">
                 <u>Index Page</u>
             </a>
         </li>
