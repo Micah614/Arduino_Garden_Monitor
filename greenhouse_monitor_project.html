@@ -804,7 +804,7 @@
             on my local laptop bus. At the moment I cannot operate the device unless my laptop is powered on, I need to change that.
         </p>
         <p>
-            The firmware I developed for this project appears remarkably fault-tolerant. The very nature of these programs seems to imbue 
+            The firmware that I developed for this project appears remarkably fault-tolerant. The very nature of these programs seems to imbue 
             them with an almost indomitable will to connect with the next device. The reason that a standalone power source is so important 
             is that if this device is able to boot up and operate on its' own, then not even a power outage can stop this bugger from 
             updating my remote tuple variable. Removing the devices' dependency on my local computer could also help to improve the 
@@ -813,8 +813,9 @@
         </p>
         <p>
             I would also like to synchronize and/or adjust the sampling rate at some of these devices. Currently the Uno collects data 
-            at a rate of 1Hz and the NodeMCU draws and relays tuples at a sampling rate of 2Hz. From what I have read, the coordination 
-            LAN and WAN networking events can be critical to an API such as my own.
+            at a rate of 1Hz and the NodeMCU draws and relays tuples at a sampling rate of 2Hz. From what I have read, the coordinated frequencies
+            of LAN and WAN based networking events can be critical for an API such as this. The general idea here is to pipeline the instructions 
+            as efficiently as possible.
         </p>
         <p>  
             Now that my data tuple is up in the cloud, I am free to desgin REACT Web Hooks that can help me pull in this remote resource 
