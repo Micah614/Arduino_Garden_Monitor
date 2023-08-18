@@ -18,6 +18,7 @@ a {
 /* Special Format Classes */
 .weekly_update {
     text-align: center;
+    color: dodgerblue;
     /* place additional formatting seletions for the weekly_update class here. */
 }
 /* Example of a dual class invocation from W3Schools.com: */
