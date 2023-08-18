@@ -14,6 +14,16 @@ a {
     text-decoration: underline;
 }
 
+
+/* Special Format Classes */
+.weekly_update {
+    text-align: center;
+    /* place additional formatting seletions for the weekly_update class here. */
+}
+/* Example of a dual class invocation from W3Schools.com: */
+/* <p class="center large">This paragraph refers to two classes.</p> */
+
+
 /*table format provided by https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tr*/
 td,
 th {
