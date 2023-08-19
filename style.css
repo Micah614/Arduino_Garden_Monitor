@@ -1,5 +1,5 @@
 
-
+/* Basic CSS style selectors. */
 body {
     font-family: veranda, Arial, Helvetica, sans-serif;
     background-image: url("gradient_bg.png");
@@ -15,11 +15,8 @@ h3, h4, h5 {
 a {
     text-decoration: underline;
 }
-
-
-td,
-th {
-    border: 1px solid rgb(190, 190, 190);
+td, th {
+    border: 1px solid rgb(32, 183, 21);
     padding: 10px;
 }
 
@@ -67,6 +64,7 @@ img {
 
 
 
+
 #navigation_div {
     background-image: url("./Images/iot.png");
     background-repeat: no-repeat;
@@ -78,6 +76,8 @@ img {
     padding: 40 px;
     width: 60%;
 }
+
+
 
 
 /* CSS class definitions */
