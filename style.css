@@ -16,25 +16,7 @@ a {
     text-decoration: underline;
 }
 
-#navigation_div {
-    background-image: url("./Images/iot.png");
-    background-repeat: no-repeat;
-    background-position: right top;
-}
 
-
-
-/* Special Format Classes */
-.weekly_update {
-    text-align: center;
-    color: dodgerblue;
-    /* place additional formatting seletions for the weekly_update class here. */
-}
-/* Example of a dual class invocation from W3Schools.com: */
-/* <p class="center large">This paragraph refers to two classes.</p> */
-
-
-/*table format provided by https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tr*/
 td,
 th {
     border: 1px solid rgb(190, 190, 190);
@@ -71,9 +53,6 @@ table {
     font-size: 0.8rem;
 }
 
-
-
-
 a:hover {
     color: red;
 }
@@ -84,11 +63,40 @@ img {
     max-width: 70%; 
     max-height: auto;
 }
-#navigation_menu { <!-- This is an id selector. -->
+
+
+
+
+#navigation_div {
+    background-image: url("./Images/iot.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+#navigation_menu { 
     border: 1px solid black;
     padding: 40 px;
     width: 60%;
 }
+
+
+/* CSS class definitions */
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+
+/* the weekly_update CSS style class. use this format for weekly project status updates. */
+.weekly_update {
+    text-align: center;
+    color: dodgerblue;  /*color of the heading (text)*/
+    background-color: cadetblue;
+    /* place additional formatting seletions for the weekly_update class here. */
+}
+
 .navigation_div {
     border: 5px solid #000000;
     width: 60%;
