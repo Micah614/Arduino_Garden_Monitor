@@ -2,6 +2,8 @@
 
 body {
     font-family: veranda, Arial, Helvetica, sans-serif;
+    background-image: url("gradient_bg.png");
+    background-repeat: repeat-y;
 }
 h1 {
     font-size: 120%;
