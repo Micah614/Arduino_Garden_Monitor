@@ -8,6 +8,7 @@ h1 {
     font-size: 120%;
 }
 h1, h2, h3, h4, h5 {
+    color: rgb(17, 107, 252);
     text-decoration: underline;
     font-weight: bold;
 }
