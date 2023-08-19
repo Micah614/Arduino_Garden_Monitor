@@ -16,6 +16,13 @@ a {
     text-decoration: underline;
 }
 
+#navigation_div {
+    background-image: url("img_tree.png");
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+
 
 /* Special Format Classes */
 .weekly_update {
