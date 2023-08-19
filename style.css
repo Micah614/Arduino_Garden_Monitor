@@ -17,7 +17,7 @@ a {
 }
 
 #navigation_div {
-    background-image: url("img_tree.png");
+    background-image: url("./Images/iot.png");
     background-repeat: no-repeat;
     background-position: right top;
 }
