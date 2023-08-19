@@ -49,6 +49,8 @@ p {
     font-size: 90%;
 }
 img {
+    border-collapse: collapse;
+    border: 2px solid rgb(35, 216, 71);  /*table border color.*/
     max-width: 70%; 
     max-height: auto;
 }
