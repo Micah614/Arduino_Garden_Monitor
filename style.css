@@ -76,8 +76,10 @@ img {
 }
 .weekly_update {
     text-align: center;
-    color: dodgerblue;  /*color of the heading (text)*/
-    background-color: rgb(17, 55, 57);
+    /* color: dodgerblue;  color of the heading (text) */
+    color: rgb(35, 216, 71);;  color of the heading (text)
+    /* background-color: rgb(35, 216, 71); */
+    background-color: dodgerblue;
     /* place additional formatting seletions for the weekly_update class here. */
 }
 .navigation_div {
