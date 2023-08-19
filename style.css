@@ -50,7 +50,7 @@ p {
     font-size: 90%;
 }
 img {
-    border-collapse: collapse;
+    /* border-collapse: collapse; */
     border: 2px solid rgb(35, 216, 71);  /*image border color should match the table borders.*/
     max-width: 70%; 
     max-height: auto;
