@@ -106,6 +106,6 @@ img {
     padding-right: 1px;
     margin-right: 1px;
 }
-.warning {  <!-- This is a class selector. -->
+.warning {  /* This is a class selector. */
     font-weight: bold;
 }
