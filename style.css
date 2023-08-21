@@ -1,6 +1,7 @@
 /* Basic CSS style selectors. */
 body {
     font-family: veranda, Arial, Helvetica, sans-serif;
+    background-color: rgb(200, 232, 243);
     background-repeat: repeat-x;
 }
 h1 {
@@ -79,10 +80,10 @@ img {
 }
 .weekly_update {
     text-align: center;
-    /* color: dodgerblue;  color of the heading (text) */
-    color: rgb(35, 216, 71);;  color of the heading (text)
+    color: rgb(35, 216, 71); /* color of the heading (text)*/
+    background-color: blue;
     /* background-color: rgb(35, 216, 71); */
-    background-color: dodgerblue;
+    /* background-color: dodgerblue; */
     /* place additional formatting seletions for the weekly_update class here. */
 }
 .navigation_div {
