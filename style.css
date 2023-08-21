@@ -1,7 +1,6 @@
 /* Basic CSS style selectors. */
 body {
     font-family: veranda, Arial, Helvetica, sans-serif;
-    background-color: lightblue;
     background-repeat: repeat-x;
 }
 h1 {
