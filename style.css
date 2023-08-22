@@ -8,8 +8,9 @@ h1 {
     font-size: 120%;
 }
 h1, h2, h3, h4, h5 {
-    color: lightblue;
+    color: dodgerblue;
     text-decoration: underline;
+    text-align: center;
     font-weight: bold;
     background-color: black;
 }
