@@ -12,6 +12,8 @@ This website was developed using HTML5, CSS3 and JavaScript. C/C++ is.are the na
 
 The goal will be to integrate several arduino sensors (i.e., those for temperature, pH, and total dissolved solids, etc.) on a common serial bus driven by an Arduino Uno R3 (slave) single-board computer. Once I have installed, integrated, and beta-tested the sensor relay, I will investigate methods to stream, aggregate, and display the sensor information to a REST API endpoint with the help of a ESP-8266 (master) WiFi transceiver module chip. 
 
+TODO: change tense.
+
 This project will investigate Arduino prototyping and concepts related to the so-called "internet of things" (AKA "IOT"), with a focus on real-time data collection and routing, microservice architecture patterns, and basic UX/UI design principles. 
 
 Vision Statement: My goals for this project are: 1.) Learn the basics of Arduino sensors, network hardware, compiler, and the IDE. 2.) Develop hands-on experience with IOT networks and the development of application-driven devices. 3.) Increase my awareness of object oriented programming patterns in strongly-typed languages such as C++ and Java 4.) Extend my knowledge of data transformations, tuple formatting, and web-development using HTML/CSS/JavaScript architectural patterns.
