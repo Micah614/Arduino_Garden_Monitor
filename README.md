@@ -10,7 +10,7 @@ The objective of this project is to create an Arduino garden monitoring device f
 
 This website was developed using HTML5, CSS3 and JavaScript. C/C++ is.are the native language(s) of Arduino prototyping, and it is the native language used for programming the embedded IOT firmware. This instrument is being used to monitor the conditions of my household garden tent while my wife and I are away on vacation.
 
-The goal will be to integrate several arduino sensors (i.e., those for temperature, pH, and total dissolved solids, etc.) on a common serial bus and a single-board computer. Once I have installed, integrated, and beta-tested the sensor relay, I will investigate methods to stream, aggregate, persist, and display this information using a REST API endpoint with the help of an ESP-8266 WiFi transceiver module. 
+The goal will be to integrate several arduino sensors (i.e., those for temperature, pH, and total dissolved solids, etc.) on a common serial bus driven by an Arduino Uno R3 single-board computer. Once I have installed, integrated, and beta-tested the sensor relay, I will investigate methods to stream, aggregate, persist, and display this information using a REST API endpoint with the help of an ESP-8266 WiFi transceiver module. 
 
 This project will investigate Arduino prototyping and concepts related to the so-called "internet of things" (AKA "IOT"), with a focus on real-time data collection and routing, microservice architecture patterns, and basic UX/UI design principles. 
 
