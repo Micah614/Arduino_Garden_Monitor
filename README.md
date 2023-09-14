@@ -1,4 +1,4 @@
-KO# arduino-indoor-weatherstation
+# arduino-indoor-weatherstation
 
 <h2>Micah Simmerman</h2>
 
